@@ -1,0 +1,21 @@
+.rasty form button {
+	
+	border-color: #AAAAAA;
+	margin-left: 14px;
+}
+
+.rasty fieldset legend{
+
+	width:70%;
+}
+
+.rasty form input[type="text"],
+.rasty form textarea, 
+.rasty form select,
+.rasty form input[type="password"]{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 2px;
+	padding-right: 2px;
+    width: 100%;
+}

@@ -1,0 +1,231 @@
+<rasty specificationClass="Secyt\UI\components\form\integranteEstado\IntegranteEstadoForm" templateLocation="IntegranteEstadoForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="integranteEstado.oid" />
+	</component>
+	
+	<component id="estado" type="InputCombo">
+		<param name="inputId" value="str:estado" />
+		<param name="name" value="str:estado" />
+		<param name="value" value="integranteEstado.estado" />
+		<param name="options" value="estados" />
+		<param name="finder" value="estadoFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	
+	
+	<component id="tipo" type="InputCombo">
+		<param name="inputId" value="str:tipo" />
+		<param name="name" value="str:tipo" />
+		<param name="value" value="integranteEstado.tipo" />
+		<param name="options" value="tipos" />
+		<param name="finder" value="tipoFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="facultad" type="InputCombo">
+		<param name="inputId" value="str:facultad" />
+		<param name="name" value="str:facultad" />
+		<param name="value" value="integranteEstado.facultad" />
+		<param name="options" value="facultades" />
+		<param name="finder" value="facultadFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	
+		
+	<component id="integrante" type="InputFindEntity">
+		<param name="inputId" value="str:integrante" />
+		<param name="name" value="str:integrante" />
+		<param name="value" value="integranteEstado.integrante" />
+		<param name="placeholder" value="msg:integranteEstado.integrante" />
+		<param name="finder" value="integranteFinderClazz" />
+		
+	</component>
+	
+	
+
+	
+	
+	
+	
+	<component id="categoria" type="InputCombo">
+		<param name="inputId" value="str:categoria" />
+		<param name="name" value="str:categoria" />
+		<param name="value" value="integranteEstado.categoria" />
+		<param name="options" value="categorias" />
+		<param name="finder" value="categoriaFinderClazz" />
+		
+		
+	</component>
+	
+	
+	
+
+	
+	
+	
+	<component id="cargo" type="InputCombo">
+		<param name="inputId" value="str:cargo" />
+		<param name="name" value="str:cargo" />
+		<param name="value" value="integranteEstado.cargo" />
+		<param name="options" value="cargos" />
+		<param name="finder" value="cargoFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="deddoc" type="InputCombo">
+		<param name="inputId" value="str:deddoc" />
+		<param name="name" value="str:deddoc" />
+		<param name="value" value="integranteEstado.deddoc" />
+		<param name="options" value="deddocs" />
+		<param name="finder" value="deddocFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="dtCargo" type="InputDate">
+		<param name="inputId" value="str:dtCargo" />
+		<param name="name" value="str:dtCargo" />
+		<param name="value" value="integranteEstado.dtCargo" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	
+	<component id="carrerainv" type="InputCombo">
+		<param name="inputId" value="str:carrerainv" />
+		<param name="name" value="str:carrerainv" />
+		<param name="value" value="integranteEstado.carrerainv" />
+		<param name="options" value="carrerainvs" />
+		<param name="finder" value="carrerainvFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="organismo" type="InputCombo">
+		<param name="inputId" value="str:organismo" />
+		<param name="name" value="str:organismo" />
+		<param name="value" value="integranteEstado.organismo" />
+		<param name="options" value="organismos" />
+		<param name="finder" value="organismoFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	
+	<component id="dtCarrerainv" type="InputDate">
+		<param name="inputId" value="str:dtCarrerainv" />
+		<param name="name" value="str:dtCarrerainv" />
+		<param name="value" value="integranteEstado.dtCarrerainv" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	
+	
+	<component id="orgbeca" type="InputCombo">
+		<param name="inputId" value="str:orgbeca" />
+		<param name="name" value="str:orgbeca" />
+		<param name="value" value="integranteEstado.orgbeca" />
+		<param name="options" value="orgbecas" />
+	</component>
+	
+	<component id="tipobeca" type="InputCombo">
+		<param name="inputId" value="str:tipobeca" />
+		<param name="name" value="str:tipobeca" />
+		<param name="value" value="integranteEstado.tipobeca" />
+		<param name="options" value="tipobecas" />
+	</component>
+	
+	<component id="dtBeca" type="InputDate">
+		<param name="inputId" value="str:dtBeca" />
+		<param name="name" value="str:dtBeca" />
+		<param name="value" value="integranteEstado.dtBeca" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="dtBecaHasta" type="InputDate">
+		<param name="inputId" value="str:dtBecaHasta" />
+		<param name="name" value="str:dtBecaHasta" />
+		<param name="value" value="integranteEstado.dtBecaHasta" />
+		<param name="placeholder" value="msg:cargo.hasta" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="blBecaEstimulo" type="InputCheckBox">
+		<param name="inputId" value="str:blBecaEstimulo" />
+		<param name="name" value="str:blBecaEstimulo" />
+		<param name="value"  value="str:blBecaEstimulo" />
+		<param name="isChecked" value="integranteEstado.blBecaEstimulo" />
+	</component>
+	
+	<component id="dtBecaEstimulo" type="InputDate">
+		<param name="inputId" value="str:dtBecaEstimulo" />
+		<param name="name" value="str:dtBecaEstimulo" />
+		<param name="value" value="integranteEstado.dtBecaEstimulo" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="dtBecaEstimuloHasta" type="InputDate">
+		<param name="inputId" value="str:dtBecaEstimuloHasta" />
+		<param name="name" value="str:dtBecaEstimuloHasta" />
+		<param name="value" value="integranteEstado.dtBecaEstimuloHasta" />
+		<param name="placeholder" value="msg:cargo.hasta" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="horasinv" type="InputNumber">
+		<param name="inputId" value="str:horasinv" />
+		<param name="name" value="str:horasinv" />
+		<param name="value" value="integranteEstado.horasinv" />
+		
+		<param name="placeholder" value="msg:integranteEstado.horasinv" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="alta" type="InputDate">
+		<param name="inputId" value="str:alta" />
+		<param name="name" value="str:alta" />
+		<param name="value" value="integranteEstado.alta" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="baja" type="InputDate">
+		<param name="inputId" value="str:baja" />
+		<param name="name" value="str:baja" />
+		<param name="value" value="integranteEstado.baja" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="cambio" type="InputDate">
+		<param name="inputId" value="str:cambio" />
+		<param name="name" value="str:cambio" />
+		<param name="value" value="integranteEstado.cambio" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="motivo" type="InputTextArea">
+		<param name="inputId" value="str:motivo" />
+		<param name="name" value="str:motivo" />
+		<param name="value" value="integranteEstado.motivo" />
+		<param name="placeholder" value="msg:integranteEstado.motivo" />	
+		<param name="rows" value="str:2" />	
+		
+	</component>
+	
+</rasty>

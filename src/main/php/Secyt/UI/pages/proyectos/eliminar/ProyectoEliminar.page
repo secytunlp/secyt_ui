@@ -1,0 +1,14 @@
+<rasty specificationClass="Secyt\UI\pages\proyectos\eliminar\ProyectoEliminar" templateLocation="pages/proyectos/eliminar/ProyectoEliminar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+	<param name="proyectoOid" value="get:oid" />
+	<param name="error" value="get:error" />
+
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="proyecto.oid" />
+	</component>
+	
+</rasty>

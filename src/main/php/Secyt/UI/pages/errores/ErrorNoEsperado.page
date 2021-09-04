@@ -1,0 +1,6 @@
+<rasty specificationClass="Secyt\UI\pages\errores\ErrorNoEsperado" templateLocation="pages/errores/ErrorNoEsperado.htm">  
+
+	<param name="layoutType" value="str:SecytErrorLayout" />
+	<param name="mensaje" value="get:error" />
+
+</rasty>

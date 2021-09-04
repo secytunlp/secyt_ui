@@ -1,0 +1,107 @@
+<!-- BEGIN: main-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>{title}</title>
+
+
+<!-- BEGIN: meta_tag -->
+<meta http-equiv='{http_equiv}' content='{meta_content}'  name='{name}'/>
+<!-- END: meta_tag -->
+
+
+<!-- BEGIN: style -->
+<link rel="stylesheet" href="{css}" type="text/css" />
+<!-- END: style -->
+
+<!--[if lt IE 9]>
+	<script language="javascript" src="{WEB_PATH}/js/jquery/jquery-1.11.2.min.js"></script>			
+<![endif]-->
+
+<!--[if (gte IE 9) | (!IE)]>  
+	<script language="javascript" src="{WEB_PATH}/js/jquery/jquery-2.1.3.min.js"></script>
+<!--<![endif]--> 
+
+
+<!--[if !IE]><!--> <script language="javascript" src="{WEB_PATH}/js/jquery/jquery-2.1.3.min.js"></script> <!--<![endif]-->
+			
+			
+			
+<!-- BEGIN: link -->
+<link rel="{rel}" href="{href}" type="{type}" />
+<!-- END: link -->
+
+<!-- BEGIN: script -->
+<script language="javascript" src="{js}"></script>
+<!-- END: script -->
+
+<script type="text/javascript">
+
+function showInfoMessage( msg, hide ){
+	$( "#layout_info_message" ).html( msg );
+	updated_right = ($(window).width() / 2) - ($( "#layout_info" ).width()/2);
+	$( "#layout_info" ).css({'right': updated_right});
+	
+	if( hide )
+		$( "#layout_info" ).show().delay(4000).slideUp(300);
+	else
+		$( "#layout_info" ).show();
+}
+
+function showErrorMessage( msg, hide ){
+
+	
+
+	$( "#layout_error_message" ).html( msg );
+	updated_right = ($(window).width() / 2) - ($( "#layout_error" ).width()/2);
+	$( "#layout_error" ).css({'right': updated_right});
+
+	updated_top = ($(window).height() / 2) - ($( "#layout_error" ).height()/2);
+	$( "#layout_error" ).css({'top': updated_top});
+	
+	if( hide )
+		$( "#layout_error" ).show().delay(4000).slideUp(300);
+	else
+		$( "#layout_error" ).show();
+
+}
+
+</script>
+</head>
+<body class="rasty metro">
+
+<div class="header-wrapper">
+   	
+   	<div class="header-logo">
+       	<a class="logo" target="_blank" href="#"><img border="0" alt="{login_titulo} - {login_subtitulo}"  title="{login_titulo} - {login_subtitulo}" name="imLogo" id="imLogo" src="{WEB_PATH}/css/images/logo.png" ></a>
+   	</div>
+       
+</div>
+    
+<div style="clear: both;"></div>
+
+<div class="content-wrapper">
+
+<div id="layout_info" class="ui-state-highlight ui-corner-all" style="display:none;position:absolute; right:50%; top:0px;margin: 10px;padding: 6pt .7em;"> 
+	<p>
+	<span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+	<span id="layout_info_message"></span>
+	</p>
+</div>
+<div id="layout_error" class="ui-state-error ui-corner-all" style="z-index:10000;display:none;position:absolute; right:50%; top:0px;margin: 10px;padding: 6pt .7em;"> 
+	<p>
+	<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+	<span id="layout_error_message"></span>
+	</p>
+</div>
+
+<h1>Lo sentimos, esta operaci&oacute;n no está disponible</h1>
+	
+{page}
+
+</div>
+
+<rasty id="footer"/>
+</body>
+</html>
+<!-- END: main-->

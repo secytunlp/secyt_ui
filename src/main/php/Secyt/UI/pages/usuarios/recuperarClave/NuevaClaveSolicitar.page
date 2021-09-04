@@ -1,0 +1,7 @@
+<rasty specificationClass="Secyt\UI\pages\usuarios\recuperarClave\NuevaClaveSolicitar" templateLocation="pages/usuarios/recuperarClave/NuevaClaveSolicitar.htm"> 
+
+	<param name="layoutType" value="str:SecytLoginMetroLayout" />
+	<param name="error" value="get:error" />
+
+		
+</rasty>

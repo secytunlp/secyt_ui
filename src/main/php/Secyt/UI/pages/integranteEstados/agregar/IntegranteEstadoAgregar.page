@@ -1,0 +1,14 @@
+<rasty specificationClass="Secyt\UI\pages\integranteEstados\agregar\IntegranteEstadoAgregar" templateLocation="pages/integranteEstados/agregar/IntegranteEstadoAgregar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+
+	<component id="integranteEstadoForm" type="IntegranteEstadoForm">
+		<param name="legend" value="msg:integranteEstado.agregar.legend" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="action" value="linkActionAgregarIntegranteEstado" />
+		<param name="method" value="str:post" />
+		<param name="integranteEstado" value="integranteEstado" />
+	</component>
+	
+</rasty>

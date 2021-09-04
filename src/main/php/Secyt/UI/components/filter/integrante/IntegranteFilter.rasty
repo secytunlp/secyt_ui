@@ -1,0 +1,41 @@
+<rasty specificationClass="Secyt\UI\components\filter\integrante\IntegranteFilter" templateLocation="IntegranteFilter.htm">
+
+	<component id="codigo" type="InputText">
+		<param name="inputId" value="str:codigo" />
+		<param name="name" value="str:codigo" />
+		<param name="value" value="criteria.codigo" />
+		<param name="placeholder" value="msg:criteria.codigo" />
+		<param name="autocomplete" value="str:off" />		
+	</component>
+	
+	<component id="investigador" type="InputText">
+		<param name="inputId" value="str:investigador" />
+		<param name="name" value="str:investigador" />
+		<param name="value" value="criteria.investigador" />
+		<param name="placeholder" value="msg:criteria.investigador" />
+		<param name="autocomplete" value="str:off" />		
+	</component>
+	
+	<component id="documento" type="InputText">
+		<param name="inputId" value="str:documento" />
+		<param name="name" value="str:documento" />
+		<param name="value" value="criteria.documento" />
+		<param name="placeholder" value="msg:criteria.documento" />
+		<param name="autocomplete" value="str:off" />		
+	</component>
+	
+
+	
+	<component id="proyecto" type="InputFindEntity">
+		<param name="inputId" value="str:proyecto" />
+		<param name="name" value="str:proyecto" />
+		<param name="value" value="criteria.proyecto" />
+		<param name="placeholder" value="msg:integrante.proyecto" />
+		<param name="finder" value="proyectoFinderClazz" />
+		
+	</component>
+	
+	
+	
+	
+</rasty>

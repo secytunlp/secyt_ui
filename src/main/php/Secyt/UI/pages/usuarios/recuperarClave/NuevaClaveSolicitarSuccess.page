@@ -1,0 +1,6 @@
+<rasty specificationClass="Secyt\UI\pages\usuarios\recuperarClave\NuevaClaveSolicitarSuccess" templateLocation="pages/usuarios/recuperarClave/NuevaClaveSolicitarSuccess.htm"> 
+
+	<param name="layoutType" value="str:SecytPublicLayout" />
+	<param name="username" value="get:username" />
+
+</rasty>

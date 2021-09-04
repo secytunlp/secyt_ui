@@ -1,0 +1,16 @@
+<rasty specificationClass="Secyt\UI\pages\proyectos\modificar\ProyectoModificar" templateLocation="pages/proyectos/modificar/ProyectoModificar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+	<param name="proyectoOid" value="get:oid" />
+
+
+	<component id="proyectoForm" type="ProyectoForm">
+		<param name="legend" value="msg:proyecto.modificar.legend" />
+		<param name="action" value="linkActionModificarProyecto" />
+		<param name="method" value="str:post" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="proyecto" value="proyecto" />
+	</component>
+	
+</rasty>

@@ -1,0 +1,319 @@
+<!-- BEGIN:main -->
+<script language="javascript"
+	src="{WEB_PATH}js/autocomplete/simpleAutoComplete.js"></script>
+<link rel="stylesheet"
+	href="{WEB_PATH}css/autocomplete/simpleAutoComplete.css"
+	type="text/css" />
+<style>
+#formTabs{
+
+}
+#formTabs fieldset {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 4px 4px 0 0;
+    box-shadow:none;
+    margin-top: 1em;
+    padding: 1.5em;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+</style>
+
+<script>
+$(function() {
+
+	$( "#tabs" ).tabs();
+});
+function  cuilFormato( ){
+
+	WalibaForms.cuilMask('#cuil');
+    
+}
+$(document).ready(function(){
+	$("#cuil").focus(function(){
+		cuilFormato( )
+	});
+	$("#orgbeca").change( function(){
+		$("#InputComboorgbeca").append("<span id='iconoLoading' style='position:absolute;'><img src='{WEB_PATH}css/images/loading.gif' width='500px'/></span>");
+		$("#tipobeca").html("");
+		var form = $("#integranteEstado_form");
+		
+		$.ajax({
+		  	url: '{linkDameTipoBeca}',
+		  	type: "POST",
+		  	dataType: "json",
+		  	data: form.serialize(),
+		  	cache: false,
+			
+		      success: function(data){
+		      	
+		    	  if( data != null && data["error"]!=null){
+						console.log(data["error"]);
+					}
+					if( data != null && data["info"]!=null){
+
+						$.each(data.tipos, function(i, item) {
+			                
+			                $("#tipobeca").append("<option value='"+i+"'>"+item+"</option>");
+			            });
+					}  
+		    	  
+		    	  
+		      	
+					 $("#iconoLoading").remove();
+		      		
+		      	} 	
+		      	
+		    
+		});
+	});
+	
+});
+
+
+function cleanInputs(){
+
+}
+
+
+
+
+
+
+</script>
+
+<div>
+<fieldset>
+		<legend>{legend}</legend>
+<form class="cuentas_form" id="integranteEstado_form" onsubmit="return validate('integranteEstado_form');" action="{action}" method="{method}">
+		<div id="tabs">
+	<ul>
+		
+		<li><a href="#tabs-1">{integrante_tab}</a></li>
+		<li><a href="#tabs-2">{docencia_tab}</a></li>
+		<li><a href="#tabs-3">{investigacion_tab}</a></li>
+		
+		
+		
+		
+	</ul>
+<div id="formTabs">
+		
+		
+
+		<rasty id="backSuccess" />
+	    <rasty id="oid" />
+	<fieldset>	
+	<div id="tabs-1" style="position:relative;">
+		
+		<div class="row">
+			<div class="col-3">
+				<div class="item">
+				    <label for="estado">{lbl_estado} *:</label>
+				    <rasty id="estado" />
+				</div>
+			</div>
+			
+			<div class="col-6">
+				<div class="item">
+				    <label for="integrante">{lbl_integrante} *:</label>
+				    <rasty id="integrante" />
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="item">
+				    <label for="tipo">{lbl_tipo} *:</label>
+				    <rasty id="tipo" />
+				</div>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+		
+		<div class="row">
+				
+				<div class="col-1">
+					<div class="item">
+						<label for="horasinv">{lbl_horasinv}:</label>
+					    <rasty id="horasinv" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="alta">{lbl_alta}:</label>
+					    <rasty id="alta" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="baja">{lbl_baja}:</label>
+					    <rasty id="baja" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="cambio">{lbl_cambio}:</label>
+					    <rasty id="cambio" />
+					</div>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		<div class="row">
+				
+				<div class="col-10">
+					<div class="item">
+					    <label for="motivo">{lbl_motivo}:</label>
+					    <rasty id="motivo" />
+					</div>
+				</div>
+				
+			<div style="clear: both"></div>	
+			</div>
+		</div>
+	
+	<div id="tabs-2" style="position:relative;">
+	
+			<div class="row">
+				<div class="col-5">
+					<div class="item">
+						<label for="cargo">{lbl_cargo_nombre}:</label>
+					    <rasty id="cargo" />
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="item">
+						<label for="deddoc">{lbl_cargo_dedicacion}:</label>
+					    <rasty id="deddoc" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="dtCargo">{lbl_cargo_desde}:</label>
+					    <rasty id="dtCargo" />
+					</div>
+				</div>
+				
+				<div style="clear: both"></div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<div class="item">
+						<label for="facultad">{lbl_facultad}:</label>
+					    <rasty id="facultad" />
+					</div>
+				</div>
+				
+				
+				
+		</div>
+	
+	</div>
+	<div id="tabs-3" style="position:relative;">
+			<div class="row">
+			<div class="col-2">
+					<div class="item">
+						<label for="categoria">{lbl_categoria}:</label>
+					    <rasty id="categoria" />
+					</div>
+				</div>
+			
+				<div style="clear: both"></div>
+				</div>
+			<fieldset>
+			<legend>{lbl_carrerainv_legend} </legend>
+			<div class="row">
+				<div class="col-5">
+					<div class="item">
+						<label for="carrerainv">{lbl_carrerainv}:</label>
+					    <rasty id="carrerainv" />
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="item">
+						<label for="organismo">{lbl_organismo}:</label>
+					    <rasty id="organismo" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="dtCarrerainv">{lbl_cargo_desde}:</label>
+					    <rasty id="dtCarrerainv" />
+					</div>
+				</div>
+				
+				<div style="clear: both"></div>
+			</div>
+			
+		</fieldset>	
+		<fieldset>
+			<legend>{lbl_becas_legend} </legend>
+			<div class="row">
+				<div class="col-3">
+					<div class="item">
+						<label for="orgbeca">{lbl_orgbeca}:</label>
+					    <rasty id="orgbeca" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="tipobeca">{lbl_tipobeca}:</label>
+					    <rasty id="tipobeca" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="dtBeca">{lbl_cargo_desde}:</label>
+					    <rasty id="dtBeca" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="dtBecaHasta">{lbl_cargo_hasta}:</label>
+					    <rasty id="dtBecaHasta" />
+					</div>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<div class="item">
+						<label for="blBecaEstimulo">{lbl_blBecaEstimulo}:</label>
+					    <rasty id="blBecaEstimulo" />
+					</div>
+				</div>
+				
+				<div class="col-3">
+					<div class="item">
+						<label for="dtBecaEstimulo">{lbl_cargo_desde}:</label>
+					    <rasty id="dtBecaEstimulo" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="dtBecaEstimuloHasta">{lbl_cargo_hasta}:</label>
+					    <rasty id="dtBecaEstimuloHasta" />
+					</div>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		</fieldset>	
+		
+	</div>
+</fieldset>
+</div>
+</form>
+<!-- BEGIN: msg_error -->
+<fieldset class="ui-state-error">
+	{msg}	
+</fieldset>
+<!-- END: msg_error -->
+	
+<form  class="cuentas_form" id="buttons{inputId}">
+	<fieldset class="tblFooters">
+	
+		<button type="button"  id="input_submit" onclick="javascript: submitFormulario('integranteEstado_form'); "><i class="icon-checkmark on-left"></i>{lbl_submit}</button>
+
+		<button type="button"  id="input_button_2" onclick="javascript: window.location.href = '{cancel}'; "><i class="icon-cancel-2 on-left"></i>{lbl_cancel}</button>
+	
+	</fieldset>
+</form>	
+</div>
+<!-- END:main -->

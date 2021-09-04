@@ -1,0 +1,14 @@
+<rasty specificationClass="Secyt\UI\pages\docentes\eliminar\DocenteEliminar" templateLocation="pages/docentes/eliminar/DocenteEliminar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+	<param name="docenteOid" value="get:oid" />
+	<param name="error" value="get:error" />
+
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="docente.oid" />
+	</component>
+	
+</rasty>

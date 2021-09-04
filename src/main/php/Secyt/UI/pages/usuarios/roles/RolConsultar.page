@@ -1,0 +1,8 @@
+<rasty specificationClass="Secyt\UI\pages\usuarios\roles\RolConsultar" templateLocation="pages/usuarios/roles/RolConsultar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+	<param name="usuarioOid" value="get:oid" />
+
+
+	
+</rasty>

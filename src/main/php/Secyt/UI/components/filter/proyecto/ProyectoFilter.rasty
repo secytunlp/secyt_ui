@@ -1,0 +1,59 @@
+<rasty specificationClass="Secyt\UI\components\filter\proyecto\ProyectoFilter" templateLocation="ProyectoFilter.htm">
+
+	<component id="codigo" type="InputText">
+		<param name="inputId" value="str:codigo" />
+		<param name="name" value="str:codigo" />
+		<param name="value" value="criteria.codigo" />
+		<param name="placeholder" value="msg:criteria.codigo" />
+		<param name="autocomplete" value="str:off" />		
+	</component>
+	
+	
+	
+	<component id="facultad" type="InputCombo">
+		<param name="inputId" value="str:facultad" />
+		<param name="name" value="str:facultad" />
+		<param name="value" value="criteria.facultad" />
+		<param name="options" value="facultades" />
+		<param name="finder" value="facultadFinderClazz" />
+		<param name="placeholder" value="msg:proyecto.facultad" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+	</component>
+	
+	<component id="tipoAcreditacion" type="InputCombo">
+		<param name="inputId" value="str:tipoAcreditacion" />
+		<param name="name" value="str:tipoAcreditacion" />
+		<param name="value" value="criteria.tipoAcreditacion" />
+		<param name="options" value="tipoAcreditacions" />
+		<param name="finder" value="tipoAcreditacionFinderClazz" />
+		<param name="placeholder" value="msg:proyecto.tipoAcreditacion" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+	</component>
+	
+	<component id="estado" type="InputCombo">
+		<param name="inputId" value="str:estado" />
+		<param name="name" value="str:estado" />
+		<param name="value" value="criteria.estado" />
+		<param name="options" value="estados" />
+		<param name="finder" value="estadoFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="filtroPredefinido" type="InputCombo">
+		<param name="inputId" value="str:filtroPredefinido" />
+		<param name="name" value="str:filtroPredefinido" />
+		<param name="value" value="criteria.filtroPredefinido" />
+		<param name="options" value="filtrosPredefinidos" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="director" type="InputCombo">
+		<param name="inputId" value="str:director" />
+		<param name="name" value="str:director" />
+		<param name="value" value="criteria.director" />
+		<param name="options" value="directores" />
+		<param name="finder" value="directorFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+</rasty>

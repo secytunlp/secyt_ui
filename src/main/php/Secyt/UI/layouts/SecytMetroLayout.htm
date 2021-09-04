@@ -1,0 +1,109 @@
+<!-- BEGIN: main-->
+<!DOCTYPE html>
+
+<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
+<!--[if lt IE 7 ]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="es">
+<!--<![endif]-->
+
+<head>
+<title>{title}</title>
+
+<link href="{WEB_PATH}css/images/favicon.png" type="image/png" rel="icon">
+
+<!-- BEGIN: meta_tag -->
+<meta http-equiv='{http_equiv}' content='{meta_content}'  name='{name}'/>
+<!-- END: meta_tag -->
+
+
+<!-- BEGIN: style -->
+<link rel="stylesheet" href="{css}" type="text/css" />
+<!-- END: style -->
+
+
+<!-- BEGIN: link -->
+<link rel="{rel}" href="{href}" type="{type}" />
+<!-- END: link -->
+
+<!--[if IE]>
+<link rel="stylesheet" href="{WEB_PATH}/metro/css/ie.css" type="text/css" />
+<![endif]-->
+
+
+<!--[if lt IE 9]>
+	<script language="javascript" src="{WEB_PATH}/js/jquery/jquery-1.11.2.min.js"></script>			
+<![endif]-->
+
+<!--[if (gte IE 9) | (!IE)]>  
+	<script language="javascript" src="{WEB_PATH}/js/jquery/jquery-2.1.3.min.js"></script>
+<!--<![endif]--> 
+
+
+<!--[if !IE]><!--> <script language="javascript" src="{WEB_PATH}/js/jquery/jquery-2.1.3.min.js"></script> <!--<![endif]-->
+
+<!-- BEGIN: script -->
+<script language="javascript" src="{js}"></script>
+<!-- END: script -->
+
+
+<script type="text/javascript">
+
+function showInfoMessage( msg, hide ){
+	$( "#layout_info_message" ).html( msg );
+	updated_right = ($(window).width() / 2) - ($( "#layout_info" ).width()/2);
+	$( "#layout_info" ).css({'right': updated_right});
+	
+	if( hide )
+		$( "#layout_info" ).show().delay(4000).slideUp(300);
+	else
+		$( "#layout_info" ).show();
+}
+
+function showErrorMessage( msg, hide ){
+
+	
+
+	$( "#layout_error_message" ).html( msg );
+	updated_right = ($(window).width() / 2) - ($( "#layout_error" ).width()/2);
+	$( "#layout_error" ).css({'right': updated_right});
+
+	updated_top = ($(window).height() / 2) - ($( "#layout_error" ).height()/2);
+	$( "#layout_error" ).css({'top': updated_top});
+	
+	if( hide )
+		$( "#layout_error" ).show().delay(4000).slideUp(300);
+	else
+		$( "#layout_error" ).show();
+
+}
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+</script>
+</head>
+<body class="rasty metro">
+
+<rasty id="header" />    
+
+<div id="layout_info" class="ui-state-highlight ui-corner-all" style="display:none;position:absolute; right:50%; top:0px;margin: 10px;padding: 6pt .7em;"> 
+	<p>
+	<span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+	<span id="layout_info_message"></span>
+	</p>
+</div>
+<div id="layout_error" class="ui-state-error ui-corner-all" style="z-index:10000;display:none;position:absolute; right:50%; top:0px;margin: 10px;padding: 6pt .7em;"> 
+	<p>
+	<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+	<span id="layout_error_message"></span>
+	</p>
+</div>
+	
+{page}
+<div id="ui-ayuda"  style="display:none;"></div>
+<rasty id="footer"/>
+</body>
+</html>
+<!-- END: main-->

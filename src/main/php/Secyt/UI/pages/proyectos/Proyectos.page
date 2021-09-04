@@ -1,0 +1,13 @@
+<rasty specificationClass="Secyt\UI\pages\proyectos\Proyectos" templateLocation="pages/proyectos/Proyectos.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+
+	<component id="proyectosFilter" type="ProyectoFilter">
+		<param name="gridModelClazz" value="modelClazz" />
+		<param name="uicriteriaClazz" value="uicriteriaClazz" />
+		<param name="legend" value="msg:proyecto.buscar" />
+		<param name="legendAgain" value="msg:proyecto.buscar.again" />
+		<param name="resultDiv" value="str:searchdiv" />
+	</component>
+	
+</rasty>

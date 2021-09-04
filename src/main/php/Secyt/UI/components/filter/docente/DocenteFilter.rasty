@@ -1,0 +1,49 @@
+<rasty specificationClass="Secyt\UI\components\filter\docente\DocenteFilter" templateLocation="DocenteFilter.htm">
+
+	<component id="apellido" type="InputText">
+		<param name="inputId" value="str:apellido" />
+		<param name="name" value="str:apellido" />
+		<param name="value" value="criteria.apellido" />
+		<param name="placeholder" value="msg:criteria.apellido" />
+		<param name="autocomplete" value="str:off" />		
+	</component>
+	
+	<component id="nombre" type="InputText">
+		<param name="inputId" value="str:nombre" />
+		<param name="name" value="str:nombre" />
+		<param name="value" value="criteria.nombre" />
+		<param name="placeholder" value="msg:criteria.nombre" />
+		<param name="autocomplete" value="str:off" />		
+	</component>
+	
+	<component id="documento" type="InputText">
+		<param name="inputId" value="str:documento" />
+		<param name="name" value="str:documento" />
+		<param name="value" value="criteria.documento" />
+		<param name="placeholder" value="msg:criteria.documento" />
+		<param name="autocomplete" value="str:off" />		
+	</component>
+	
+	<component id="facultad" type="InputCombo">
+		<param name="inputId" value="str:facultad" />
+		<param name="name" value="str:facultad" />
+		<param name="value" value="criteria.facultad" />
+		<param name="options" value="facultades" />
+		<param name="finder" value="facultadFinderClazz" />
+		<param name="placeholder" value="msg:docente.facultad" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+	</component>
+	
+	<component id="categoria" type="InputCombo">
+		<param name="inputId" value="str:categoria" />
+		<param name="name" value="str:categoria" />
+		<param name="value" value="criteria.categoria" />
+		<param name="options" value="categorias" />
+		<param name="finder" value="categoriaFinderClazz" />
+		<param name="placeholder" value="msg:docente.categoria" />
+		<param name="emptyOptionLabel" value="msg:combo.empty" />
+	</component>
+	
+	
+	
+</rasty>

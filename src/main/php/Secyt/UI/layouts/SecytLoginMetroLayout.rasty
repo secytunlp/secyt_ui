@@ -1,0 +1,6 @@
+<rasty specificationClass="Secyt\UI\layouts\SecytLoginMetroLayout" templateLocation="SecytLoginMetroLayout.htm">
+
+<component id="footer" type="FooterSecyt">
+	</component>
+
+</rasty>

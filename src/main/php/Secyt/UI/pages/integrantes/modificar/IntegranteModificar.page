@@ -1,0 +1,16 @@
+<rasty specificationClass="Secyt\UI\pages\integrantes\modificar\IntegranteModificar" templateLocation="pages/integrantes/modificar/IntegranteModificar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+	<param name="integranteOid" value="get:oid" />
+
+
+	<component id="integranteForm" type="IntegranteForm">
+		<param name="legend" value="msg:integrante.modificar.legend" />
+		<param name="action" value="linkActionModificarIntegrante" />
+		<param name="method" value="str:post" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="integrante" value="integrante" />
+	</component>
+	
+</rasty>

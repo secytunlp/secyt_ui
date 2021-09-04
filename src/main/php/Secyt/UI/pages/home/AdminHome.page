@@ -1,0 +1,7 @@
+<rasty specificationClass="Secyt\UI\pages\home\AdminHome" templateLocation="pages/home/AdminHome.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+
+
+	
+</rasty>

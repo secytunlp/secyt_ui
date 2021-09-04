@@ -1,0 +1,135 @@
+<!-- BEGIN:main -->
+<script language="javascript"
+	src="{WEB_PATH}js/autocomplete/simpleAutoComplete.js"></script>
+<link rel="stylesheet"
+	href="{WEB_PATH}css/autocomplete/simpleAutoComplete.css"
+	type="text/css" />
+
+
+<script>
+
+
+function submitBuscarIntegrantes(){
+
+	$( "#page" ).val( 1 );
+	
+	//findIntegrantes();
+
+	submitBuscar("{WEB_PATH}", "#integrantes_filter{id}", "#{resultDiv}");
+}
+
+function ordenarIntegrantes(name, type){
+
+	$( "#orderBy" ).val(name);
+	$( "#orderByType" ).val(type);
+	
+	submitBuscar("{WEB_PATH}", "#integrantes_filter{id}", "#{resultDiv}");
+}
+
+function paginateIntegrantes(page){
+	$( "#page" ).val(page);
+
+	submitBuscar("{WEB_PATH}", "#integrantes_filter{id}", "#{resultDiv}");
+}
+
+function selectIntegrante(event, integranteId, rowId, checkboxId){
+
+
+	/* muestro un pop con las opciones sobre el integrante */
+	
+	gotoLink("{linkSelect}?oid="+integranteId);
+	
+}
+
+function deleteCallback(data){
+
+	console.log( data["info"] );
+	submitBuscar("{WEB_PATH}", "#integrantes_filter{id}", "#{resultDiv}");
+}
+
+function cambioEstadoCallback(data){
+
+	console.log( data["info"] );
+	submitBuscar("{WEB_PATH}", "#integrantes_filter{id}", "#{resultDiv}");
+}
+
+$(document).ready(function(){
+
+	submitBuscar("{WEB_PATH}", "#integrantes_filter{id}", "#{resultDiv}");
+
+	 $(".item input").keyup(function (e) {
+         if (e.keyCode == 13) {
+             // función para capturar el enter en el filter default.
+        	 submitBuscar("{WEB_PATH}", "#integrantes_filter{id}", "#{resultDiv}");
+         }
+     });
+	
+});
+
+
+</script>
+
+
+<div id="divIntegrantes{id}Toggle1" style="display:none">
+<form class="cuentas_form">
+		<fieldset>
+		<legend class="search_again" id="legend_find{id}_open">{legend_again}</legend>
+		</fieldset>
+</form>		
+</div>
+<div id="divIntegrantes{id}Toggle2">
+<form class="cuentas_form" id="integrantes_filter{id}">
+
+		<fieldset>
+		
+		<legend id="legend_find{id}">{legend}</legend>		
+		<div class="item">
+			    <label for="proyecto">{lbl_proyecto}:</label>
+		    	<rasty id="proyecto" />
+			</div>
+		<div class="criteria_left">
+			
+			
+			
+			<div class="item">
+			    <label for="codigo">{lbl_codigo}:</label>
+		    	<rasty id="codigo" />
+			</div>
+			
+			<div class="item">
+			    <label for="investigador">{lbl_investigador}:</label>
+		    	<rasty id="investigador" />
+			</div>
+			
+		</div>
+		<div class="criteria_right">
+			
+			
+			<div class="item">
+			    <label for="documento">{lbl_documento}:</label>
+		    	<rasty id="documento" />
+			</div>
+		</div>
+		
+		
+	</fieldset>
+	
+	<input type="hidden" name="model" value="{model}">
+	<input type="hidden" name="filter" value="{filter}">
+	<input type="hidden" name="sortCallback" value="ordenarIntegrantes">
+	<input type="hidden" name="paginationCallback" value="paginateIntegrantes">
+	<input type="hidden" name="selectRowCallback" value="{selectRowCallback}">
+	<input type="hidden" id="orderBy" name="orderBy" value="{orderBy}">
+	<input type="hidden" id="orderByType" name="orderByType" value="{orderByType}">
+	<input type="hidden" id="page" name="page" value="1">
+
+</form>
+<form  class="cuentas_form" id="buttons{id}">
+	<fieldset class="tblFooters">
+	
+		<button id="input_submit_ajax_Integrante{id}"  type="button"  onclick="javascript: $( '#page' ).val( 1 ); submitBuscar('{WEB_PATH}', '#integrantes_filter{id}', '#{resultDiv}');"><i class="icon-search on-left"></i>{lbl_submit}</button>
+	
+	</fieldset>
+</form>	
+</div>
+<!-- END:main -->

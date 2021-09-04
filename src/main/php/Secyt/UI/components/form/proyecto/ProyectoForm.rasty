@@ -1,0 +1,229 @@
+<rasty specificationClass="Secyt\UI\components\form\proyecto\ProyectoForm" templateLocation="ProyectoForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="proyecto.oid" />
+	</component>
+	
+	
+
+	
+	<component id="codigo" type="InputText">
+		<param name="inputId" value="str:codigo" />
+		<param name="name" value="str:codigo" />
+		<param name="value" value="proyecto.codigo" />
+		<param name="placeholder" value="msg:proyecto.codigo" />
+		<param name="autocomplete" value="str:off" />
+		<param name="requiredMessage" value="msg:proyecto.codigo.required" />
+	</component>
+	
+	
+	<component id="inicio" type="InputDate">
+		<param name="inputId" value="str:inicio" />
+		<param name="name" value="str:inicio" />
+		<param name="value" value="proyecto.inicio" />
+		<param name="placeholder" value="msg:proyecto.inicio" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	
+	<component id="fin" type="InputDate">
+		<param name="inputId" value="str:fin" />
+		<param name="name" value="str:fin" />
+		<param name="value" value="proyecto.fin" />
+		<param name="placeholder" value="msg:proyecto.fin" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="tipoAcreditacion" type="InputCombo">
+		<param name="inputId" value="str:tipoAcreditacion" />
+		<param name="name" value="str:tipoAcreditacion" />
+		<param name="value" value="proyecto.tipoAcreditacion" />
+		<param name="options" value="tipoAcreditaciones" />
+		<param name="finder" value="tipoAcreditacionFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="titulo" type="InputTextArea">
+		<param name="inputId" value="str:titulo" />
+		<param name="name" value="str:titulo" />
+		<param name="value" value="proyecto.titulo" />
+		<param name="placeholder" value="msg:proyecto.titulo" />	
+		<param name="rows" value="str:2" />	
+		<param name="requiredMessage" value="msg:proyecto.titulo.required" />
+	</component>
+	
+	<component id="codigoSIGEVA" type="InputText">
+		<param name="inputId" value="str:codigoSIGEVA" />
+		<param name="name" value="str:codigoSIGEVA" />
+		<param name="value" value="proyecto.codigoSIGEVA" />
+		<param name="placeholder" value="msg:proyecto.codigoSIGEVA" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="estado" type="InputCombo">
+		<param name="inputId" value="str:estado" />
+		<param name="name" value="str:estado" />
+		<param name="value" value="proyecto.estado" />
+		<param name="options" value="estados" />
+		<param name="finder" value="estadoFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="facultad" type="InputCombo">
+		<param name="inputId" value="str:facultad" />
+		<param name="name" value="str:facultad" />
+		<param name="value" value="proyecto.facultad" />
+		<param name="options" value="facultades" />
+		<param name="finder" value="facultadFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="unidad" type="InputCombo">
+		<param name="inputId" value="str:unidad" />
+		<param name="name" value="str:unidad" />
+		<param name="value" value="proyecto.unidad" />
+		<param name="options" value="unidades" />
+		<param name="finder" value="unidadFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="abstract" type="InputTextArea">
+		<param name="inputId" value="str:abstract" />
+		<param name="name" value="str:abstract" />
+		<param name="value" value="proyecto.abstract" />
+		<param name="placeholder" value="msg:proyecto.abstract" />	
+		<param name="rows" value="str:5" />	
+		
+	</component>
+	
+	<component id="abstractEng" type="InputTextArea">
+		<param name="inputId" value="str:abstractEng" />
+		<param name="name" value="str:abstractEng" />
+		<param name="value" value="proyecto.abstractEng" />
+		<param name="placeholder" value="msg:proyecto.abstractEng" />	
+		<param name="rows" value="str:5" />	
+		
+	</component>
+	
+	<component id="clave1" type="InputText">
+		<param name="inputId" value="str:clave1" />
+		<param name="name" value="str:clave1" />
+		<param name="value" value="proyecto.clave1" />
+		<param name="placeholder" value="msg:proyecto.clave1" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	<component id="clave2" type="InputText">
+		<param name="inputId" value="str:clave2" />
+		<param name="name" value="str:clave2" />
+		<param name="value" value="proyecto.clave2" />
+		<param name="placeholder" value="msg:proyecto.clave2" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	<component id="clave3" type="InputText">
+		<param name="inputId" value="str:clave3" />
+		<param name="name" value="str:clave3" />
+		<param name="value" value="proyecto.clave3" />
+		<param name="placeholder" value="msg:proyecto.clave3" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	<component id="clave4" type="InputText">
+		<param name="inputId" value="str:clave4" />
+		<param name="name" value="str:clave4" />
+		<param name="value" value="proyecto.clave4" />
+		<param name="placeholder" value="msg:proyecto.clave4" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="claveEng1" type="InputText">
+		<param name="inputId" value="str:claveEng1" />
+		<param name="name" value="str:claveEng1" />
+		<param name="value" value="proyecto.claveEng1" />
+		<param name="placeholder" value="msg:proyecto.claveEng1" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	<component id="claveEng2" type="InputText">
+		<param name="inputId" value="str:claveEng2" />
+		<param name="name" value="str:claveEng2" />
+		<param name="value" value="proyecto.claveEng2" />
+		<param name="placeholder" value="msg:proyecto.claveEng2" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	<component id="claveEng3" type="InputText">
+		<param name="inputId" value="str:claveEng3" />
+		<param name="name" value="str:claveEng3" />
+		<param name="value" value="proyecto.claveEng3" />
+		<param name="placeholder" value="msg:proyecto.claveEng3" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	<component id="claveEng4" type="InputText">
+		<param name="inputId" value="str:claveEng4" />
+		<param name="name" value="str:claveEng4" />
+		<param name="value" value="proyecto.claveEng4" />
+		<param name="placeholder" value="msg:proyecto.claveEng4" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="disciplina" type="InputCombo">
+		<param name="inputId" value="str:disciplina" />
+		<param name="name" value="str:disciplina" />
+		<param name="value" value="proyecto.disciplina" />
+		<param name="options" value="disciplinas" />
+		<param name="finder" value="disciplinaFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="especialidad" type="InputCombo">
+		<param name="inputId" value="str:especialidad" />
+		<param name="name" value="str:especialidad" />
+		<param name="value" value="proyecto.especialidad" />
+		<param name="options" value="especialidades" />
+		<param name="finder" value="especialidadFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="tipo" type="InputCombo">
+		<param name="inputId" value="str:tipo" />
+		<param name="name" value="str:tipo" />
+		<param name="value" value="proyecto.tipo" />
+		<param name="options" value="tipos" />
+		
+	</component>
+	
+	<component id="campo" type="InputCombo">
+		<param name="inputId" value="str:campo" />
+		<param name="name" value="str:campo" />
+		<param name="value" value="proyecto.campo" />
+		<param name="options" value="campos" />
+		<param name="finder" value="campoFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="linea" type="InputText">
+		<param name="inputId" value="str:linea" />
+		<param name="name" value="str:linea" />
+		<param name="value" value="proyecto.linea" />
+		<param name="placeholder" value="msg:proyecto.linea" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+</rasty>

@@ -1,0 +1,313 @@
+<rasty specificationClass="Secyt\UI\components\form\docente\DocenteForm" templateLocation="DocenteForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="docente.oid" />
+	</component>
+	
+	<component id="cuil" type="InputText">
+		<param name="inputId" value="str:cuil" />
+		<param name="name" value="str:cuil" />
+		<param name="value" value="docente.cuil" />
+		<param name="placeholder" value="msg:docente.cuil" />
+		<param name="autocomplete" value="str:off" />
+		<param name="requiredMessage" value="msg:docente.cuil.required" />
+	</component>
+
+	
+	<component id="apellido" type="InputText">
+		<param name="inputId" value="str:apellido" />
+		<param name="name" value="str:apellido" />
+		<param name="value" value="docente.apellido" />
+		<param name="placeholder" value="msg:docente.apellido" />
+		<param name="autocomplete" value="str:off" />
+		<param name="requiredMessage" value="msg:docente.apellido.required" />
+	</component>
+	<component id="nombre" type="InputText">
+		<param name="inputId" value="str:nombre" />
+		<param name="name" value="str:nombre" />
+		<param name="value" value="docente.nombre" />
+		<param name="placeholder" value="msg:docente.nombre" />
+		<param name="autocomplete" value="str:off" />
+		<param name="requiredMessage" value="msg:docente.nombre.required" />
+	</component>
+	
+	<component id="nacimiento" type="InputDate">
+		<param name="inputId" value="str:nacimiento" />
+		<param name="name" value="str:nacimiento" />
+		<param name="value" value="docente.nacimiento" />
+		<param name="placeholder" value="msg:docente.nacimiento" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="sexo" type="InputCombo">
+		<param name="inputId" value="str:sexo" />
+		<param name="name" value="str:sexo" />
+		<param name="value" value="docente.sexo" />
+		<param name="options" value="sexos" />
+	</component>
+	
+	<component id="calle" type="InputText">
+		<param name="inputId" value="str:calle" />
+		<param name="name" value="str:calle" />
+		<param name="value" value="docente.calle" />
+		<param name="placeholder" value="msg:docente.calle" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="nro" type="InputText">
+		<param name="inputId" value="str:nro" />
+		<param name="name" value="str:nro" />
+		<param name="value" value="docente.nro" />
+		<param name="placeholder" value="msg:docente.nro" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="piso" type="InputText">
+		<param name="inputId" value="str:piso" />
+		<param name="name" value="str:piso" />
+		<param name="value" value="docente.piso" />
+		<param name="placeholder" value="msg:docente.piso" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="depto" type="InputText">
+		<param name="inputId" value="str:depto" />
+		<param name="name" value="str:depto" />
+		<param name="value" value="docente.depto" />
+		<param name="placeholder" value="msg:docente.depto" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="facultad" type="InputCombo">
+		<param name="inputId" value="str:facultad" />
+		<param name="name" value="str:facultad" />
+		<param name="value" value="docente.facultad" />
+		<param name="options" value="facultades" />
+		<param name="finder" value="facultadFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	
+	
+	<component id="telefono" type="InputText">
+		<param name="inputId" value="str:telefono" />
+		<param name="name" value="str:telefono" />
+		<param name="value" value="docente.telefono" />
+		<param name="placeholder" value="msg:docente.telefono" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="mail" type="InputText">
+		<param name="inputId" value="str:mail" />
+		<param name="name" value="str:mail" />
+		<param name="value" value="docente.mail" />
+		<param name="placeholder" value="msg:docente.mail" />
+		<param name="checkEmail" value="str:1" />
+		<param name="invalidEmailMessage" value="msg:usuario.email.invalid" />
+		
+	</component>
+	
+	
+	<component id="localidad" type="InputText">
+		<param name="inputId" value="str:localidad" />
+		<param name="name" value="str:localidad" />
+		<param name="value" value="docente.localidad" />
+		<param name="placeholder" value="msg:docente.localidad" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="provincia" type="InputCombo">
+		<param name="inputId" value="str:provincia" />
+		<param name="name" value="str:provincia" />
+		<param name="value" value="docente.provincia" />
+		<param name="options" value="provincias" />
+		<param name="finder" value="provinciaFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="cp" type="InputText">
+		<param name="inputId" value="str:cp" />
+		<param name="name" value="str:cp" />
+		<param name="value" value="docente.cp" />
+		<param name="placeholder" value="msg:docente.cp" />
+		<param name="autocomplete" value="str:off" />
+		
+	</component>
+	
+	<component id="categoria" type="InputCombo">
+		<param name="inputId" value="str:categoria" />
+		<param name="name" value="str:categoria" />
+		<param name="value" value="docente.categoria" />
+		<param name="options" value="categorias" />
+		<param name="finder" value="categoriaFinderClazz" />
+		
+		
+	</component>
+	
+	<component id="universidad" type="InputCombo">
+		<param name="inputId" value="str:universidad" />
+		<param name="name" value="str:universidad" />
+		<param name="value" value="docente.universidad" />
+		<param name="options" value="universidades" />
+		<param name="finder" value="universidadFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	
+	
+
+	
+	<component id="titulo" type="InputCombo">
+		<param name="inputId" value="str:titulo" />
+		<param name="name" value="str:titulo" />
+		<param name="value" value="docente.titulo" />
+		<param name="options" value="titulos" />
+		<param name="finder" value="tituloFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	
+	
+	<component id="tituloPost" type="InputCombo">
+		<param name="inputId" value="str:tituloPost" />
+		<param name="name" value="str:tituloPost" />
+		<param name="value" value="docente.tituloPost" />
+		<param name="options" value="titulosPost" />
+		<param name="finder" value="tituloFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="cargo" type="InputCombo">
+		<param name="inputId" value="str:cargo" />
+		<param name="name" value="str:cargo" />
+		<param name="value" value="docente.cargo" />
+		<param name="options" value="cargos" />
+		<param name="finder" value="cargoFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="deddoc" type="InputCombo">
+		<param name="inputId" value="str:deddoc" />
+		<param name="name" value="str:deddoc" />
+		<param name="value" value="docente.deddoc" />
+		<param name="options" value="deddocs" />
+		<param name="finder" value="deddocFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="dtCargo" type="InputDate">
+		<param name="inputId" value="str:dtCargo" />
+		<param name="name" value="str:dtCargo" />
+		<param name="value" value="docente.dtCargo" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	
+	<component id="carrerainv" type="InputCombo">
+		<param name="inputId" value="str:carrerainv" />
+		<param name="name" value="str:carrerainv" />
+		<param name="value" value="docente.carrerainv" />
+		<param name="options" value="carrerainvs" />
+		<param name="finder" value="carrerainvFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="organismo" type="InputCombo">
+		<param name="inputId" value="str:organismo" />
+		<param name="name" value="str:organismo" />
+		<param name="value" value="docente.organismo" />
+		<param name="options" value="organismos" />
+		<param name="finder" value="organismoFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	
+	<component id="dtCarrerainv" type="InputDate">
+		<param name="inputId" value="str:dtCarrerainv" />
+		<param name="name" value="str:dtCarrerainv" />
+		<param name="value" value="docente.dtCarrerainv" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="unidad" type="InputCombo">
+		<param name="inputId" value="str:unidad" />
+		<param name="name" value="str:unidad" />
+		<param name="value" value="docente.unidad" />
+		<param name="options" value="unidades" />
+		<param name="finder" value="unidadFinderClazz" />
+		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+	</component>
+	
+	<component id="orgbeca" type="InputCombo">
+		<param name="inputId" value="str:orgbeca" />
+		<param name="name" value="str:orgbeca" />
+		<param name="value" value="docente.orgbeca" />
+		<param name="options" value="orgbecas" />
+	</component>
+	
+	<component id="tipobeca" type="InputCombo">
+		<param name="inputId" value="str:tipobeca" />
+		<param name="name" value="str:tipobeca" />
+		<param name="value" value="docente.tipobeca" />
+		<param name="options" value="tipobecas" />
+	</component>
+	
+	<component id="dtBeca" type="InputDate">
+		<param name="inputId" value="str:dtBeca" />
+		<param name="name" value="str:dtBeca" />
+		<param name="value" value="docente.dtBeca" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="dtBecaHasta" type="InputDate">
+		<param name="inputId" value="str:dtBecaHasta" />
+		<param name="name" value="str:dtBecaHasta" />
+		<param name="value" value="docente.dtBecaHasta" />
+		<param name="placeholder" value="msg:cargo.hasta" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="blBecaEstimulo" type="InputCheckBox">
+		<param name="inputId" value="str:blBecaEstimulo" />
+		<param name="name" value="str:blBecaEstimulo" />
+		<param name="value"  value="str:blBecaEstimulo" />
+		<param name="isChecked" value="docente.blBecaEstimulo" />
+	</component>
+	
+	<component id="dtBecaEstimulo" type="InputDate">
+		<param name="inputId" value="str:dtBecaEstimulo" />
+		<param name="name" value="str:dtBecaEstimulo" />
+		<param name="value" value="docente.dtBecaEstimulo" />
+		<param name="placeholder" value="msg:cargo.desde" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	<component id="dtBecaEstimuloHasta" type="InputDate">
+		<param name="inputId" value="str:dtBecaEstimuloHasta" />
+		<param name="name" value="str:dtBecaEstimuloHasta" />
+		<param name="value" value="docente.dtBecaEstimuloHasta" />
+		<param name="placeholder" value="msg:cargo.hasta" />
+		<param name="format" value="str:d/m/Y" />
+	</component>
+	
+	
+</rasty>

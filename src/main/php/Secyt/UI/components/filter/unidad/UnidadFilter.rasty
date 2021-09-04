@@ -1,0 +1,29 @@
+<rasty specificationClass="Secyt\UI\components\filter\unidad\UnidadFilter" templateLocation="UnidadFilter.htm">
+
+	<component id="nombre" type="InputText">
+		<param name="inputId" value="str:nombre" />
+		<param name="name" value="str:nombre" />
+		<param name="value" value="criteria.nombre" />
+		<param name="placeholder" value="msg:criteria.nombre" />
+		<param name="autocomplete" value="str:off" />		
+	</component>
+	
+	<component id="sigla" type="InputText">
+		<param name="inputId" value="str:sigla" />
+		<param name="name" value="str:sigla" />
+		<param name="value" value="criteria.sigla" />
+		<param name="placeholder" value="msg:criteria.sigla" />
+		<param name="autocomplete" value="str:off" />		
+	</component>
+
+	<component id="padre" type="InputText">
+		<param name="inputId" value="str:padre" />
+		<param name="name" value="str:padre" />
+		<param name="value" value="criteria.padre" />
+		<param name="placeholder" value="msg:criteria.padre" />
+		<param name="autocomplete" value="str:off" />		
+	</component>
+	
+	
+	
+</rasty>

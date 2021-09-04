@@ -1,0 +1,313 @@
+<!-- BEGIN:main -->
+<script language="javascript"
+	src="{WEB_PATH}js/autocomplete/simpleAutoComplete.js"></script>
+<link rel="stylesheet"
+	href="{WEB_PATH}css/autocomplete/simpleAutoComplete.css"
+	type="text/css" />
+<style>
+#formTabs{
+
+}
+#formTabs fieldset {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 4px 4px 0 0;
+    box-shadow:none;
+    margin-top: 1em;
+    padding: 1.5em;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+</style>
+
+<script>
+$(function() {
+
+	$( "#tabs" ).tabs();
+});
+
+$(document).ready(function(){
+	$("#cuil").focus(function(){
+		cuilFormato( )
+	});
+	$("#disciplina").change( function(){
+		$("#InputCombodisciplina").append("<span id='iconoLoading' style='position:absolute;'><img src='{WEB_PATH}css/images/loading.gif' width='500px'/></span>");
+		$("#especialidad").html("");
+		var form = $("#proyecto_form");
+		
+		$.ajax({
+		  	url: '{linkDameEspecialidad}',
+		  	type: "POST",
+		  	dataType: "json",
+		  	data: form.serialize(),
+		  	cache: false,
+			
+		      success: function(data){
+		      	
+		    	  if( data != null && data["error"]!=null){
+						console.log(data["error"]);
+					}
+					if( data != null && data["info"]!=null){
+
+						$.each(data.especialidades, function(i, item) {
+			                
+			                $("#especialidad").append("<option value='"+item.cd+"'>"+item.ds+"</option>");
+			            });
+					}  
+		    	  
+		    	  
+		      	
+					 $("#iconoLoading").remove();
+		      		
+		      	} 	
+		      	
+		    
+		});
+	});
+});
+
+
+
+
+
+
+
+
+
+</script>
+
+<div>
+<fieldset>
+		<legend>{legend}</legend>
+<form class="cuentas_form" id="proyecto_form" onsubmit="return validate('proyecto_form');" action="{action}" method="{method}">
+		<div id="tabs">
+	<ul>
+		
+		<li><a href="#tabs-1">{proyecto_tab}</a></li>
+		<li><a href="#tabs-2">{entidades_tab}</a></li>
+		<li><a href="#tabs-3">{resumen_tab}</a></li>
+		<li><a href="#tabs-4">{claves_tab}</a></li>
+		<li><a href="#tabs-5">{otros_tab}</a></li>
+		
+		
+	</ul>
+<div id="formTabs">
+		
+		
+
+		<rasty id="backSuccess" />
+	    <rasty id="oid" />
+	<fieldset>	
+	<div id="tabs-1" style="position:relative;">
+		
+		<div class="row">
+			<div class="col-3">
+					<div class="item">
+						<label for="tipoAcreditacion">{lbl_tipoAcreditacion}:</label>
+					    <rasty id="tipoAcreditacion" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="codigo">{lbl_codigo}:</label>
+					    <rasty id="codigo" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="inicio">{lbl_inicio}:</label>
+					    <rasty id="inicio" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="fin">{lbl_fin}:</label>
+					    <rasty id="fin" />
+					</div>
+				</div>
+			<div style="clear: both"></div>
+		</div>
+		<div class="row">
+			
+				<div class="col-20">
+					<div class="item">
+					    <label for="titulo">{lbl_titulo}:</label>
+					    <rasty id="titulo" />
+					</div>
+				</div>
+				
+			<div style="clear: both"></div>	
+			</div>
+			
+		<div class="row">
+			<div class="col-5">
+					<div class="item">
+						<label for="estado">{lbl_estado}:</label>
+					    <rasty id="estado" />
+					</div>
+				</div>
+				<div class="col-5">
+					<div class="item">
+						<label for="codigoSIGEVA">{lbl_codigoSIGEVA}:</label>
+					    <rasty id="codigoSIGEVA" />
+					</div>
+				</div>
+				
+			<div style="clear: both"></div>
+		</div>
+		</div>
+	<div id="tabs-2" style="position:relative;">
+	
+			<div class="row">
+			
+				<div class="col-20">
+					<div class="item">
+					    <label for="facultad">{lbl_facultad}:</label>
+					    <rasty id="facultad" />
+					</div>
+				</div>
+				
+				<div class="col-20">
+					<div class="item">
+					    <label for="unidad">{lbl_unidad}:</label>
+					    <rasty id="unidad" />
+					</div>
+				</div>
+			</div>
+	</div>
+	<div id="tabs-3" style="position:relative;">
+	
+			<div class="row">
+			
+				<div class="col-20">
+					<div class="item">
+					    <label for="abstract">{lbl_abstract}:</label>
+					    <rasty id="abstract" />
+					</div>
+				</div>
+				
+				<div class="col-20">
+					<div class="item">
+					    <label for="abstractEng">{lbl_abstractEng}:</label>
+					    <rasty id="abstractEng" />
+					</div>
+				</div>
+			</div>
+	</div>
+	<div id="tabs-4" style="position:relative;">
+			<div class="row">
+			<div class="col-3">
+					<div class="item">
+						<label for="clave1">{lbl_clave1}:</label>
+					    <rasty id="clave1" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="clave2">{lbl_clave2}:</label>
+					    <rasty id="clave2" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="clave3">{lbl_clave3}:</label>
+					    <rasty id="clave3" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="clave4">{lbl_clave4}:</label>
+					    <rasty id="clave4" />
+					</div>
+				</div>
+			<div style="clear: both"></div>
+		</div>
+		<div class="row">
+		<div class="col-3">
+					<div class="item">
+						<label for="claveEng1">{lbl_claveEng1}:</label>
+					    <rasty id="claveEng1" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="claveEng2">{lbl_claveEng2}:</label>
+					    <rasty id="claveEng2" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="claveEng3">{lbl_claveEng3}:</label>
+					    <rasty id="claveEng3" />
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="item">
+						<label for="claveEng4">{lbl_claveEng4}:</label>
+					    <rasty id="claveEng4" />
+					</div>
+				</div>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+	<div id="tabs-5" style="position:relative;">
+		
+		<div class="row">
+			<div class="col-4">
+					<div class="item">
+						<label for="disciplina">{lbl_disciplina}:</label>
+					    <rasty id="disciplina" />
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="item">
+						<label for="especialidad">{lbl_especialidad}:</label>
+					    <rasty id="especialidad" />
+					</div>
+				</div>
+			
+				<div class="col-3">
+					<div class="item">
+						<label for="tipo">{lbl_tipo}:</label>
+					    <rasty id="tipo" />
+					</div>
+				</div>
+			<div style="clear: both"></div>
+		</div>
+		
+			
+		<div class="row">
+			<div class="col-5">
+					<div class="item">
+						<label for="campo">{lbl_campo}:</label>
+					    <rasty id="campo" />
+					</div>
+				</div>
+				<div class="col-5">
+					<div class="item">
+						<label for="linea">{lbl_linea}:</label>
+					    <rasty id="linea" />
+					</div>
+				</div>
+				
+			<div style="clear: both"></div>
+		</div>
+		</div>
+</fieldset>
+</div>
+</form>
+<!-- BEGIN: msg_error -->
+<fieldset class="ui-state-error">
+	{msg}	
+</fieldset>
+<!-- END: msg_error -->
+	
+<form  class="cuentas_form" id="buttons{inputId}">
+	<fieldset class="tblFooters">
+	
+		<button type="button"  id="input_submit" onclick="javascript: submitFormulario('proyecto_form'); "><i class="icon-checkmark on-left"></i>{lbl_submit}</button>
+
+		<button type="button"  id="input_button_2" onclick="javascript: window.location.href = '{cancel}'; "><i class="icon-cancel-2 on-left"></i>{lbl_cancel}</button>
+	
+	</fieldset>
+</form>	
+</div>
+<!-- END:main -->

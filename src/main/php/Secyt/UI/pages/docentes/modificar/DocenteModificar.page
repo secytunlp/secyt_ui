@@ -1,0 +1,16 @@
+<rasty specificationClass="Secyt\UI\pages\docentes\modificar\DocenteModificar" templateLocation="pages/docentes/modificar/DocenteModificar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+	<param name="docenteOid" value="get:oid" />
+
+
+	<component id="docenteForm" type="DocenteForm">
+		<param name="legend" value="msg:docente.modificar.legend" />
+		<param name="action" value="linkActionModificarDocente" />
+		<param name="method" value="str:post" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="docente" value="docente" />
+	</component>
+	
+</rasty>

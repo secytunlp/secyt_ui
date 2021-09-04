@@ -1,0 +1,13 @@
+<rasty specificationClass="Secyt\UI\pages\integrantes\Integrantes" templateLocation="pages/integrantes/Integrantes.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+
+	<component id="integrantesFilter" type="IntegranteFilter">
+		<param name="gridModelClazz" value="modelClazz" />
+		<param name="uicriteriaClazz" value="uicriteriaClazz" />
+		<param name="legend" value="msg:integrante.buscar" />
+		<param name="legendAgain" value="msg:integrante.buscar.again" />
+		<param name="resultDiv" value="str:searchdiv" />
+	</component>
+	
+</rasty>

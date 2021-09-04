@@ -1,0 +1,14 @@
+<rasty specificationClass="Secyt\UI\pages\docentes\agregar\DocenteAgregar" templateLocation="pages/docentes/agregar/DocenteAgregar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+
+	<component id="docenteForm" type="DocenteForm">
+		<param name="legend" value="msg:docente.agregar.legend" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="action" value="linkActionAgregarDocente" />
+		<param name="method" value="str:post" />
+		<param name="docente" value="docente" />
+	</component>
+	
+</rasty>

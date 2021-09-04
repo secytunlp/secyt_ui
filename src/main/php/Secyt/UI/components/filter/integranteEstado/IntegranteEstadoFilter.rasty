@@ -1,0 +1,18 @@
+<rasty specificationClass="Secyt\UI\components\filter\integranteEstado\IntegranteEstadoFilter" templateLocation="IntegranteEstadoFilter.htm">
+
+	
+	
+
+	
+	<component id="integrante" type="InputFindEntity">
+		<param name="inputId" value="str:integrante" />
+		<param name="name" value="str:integrante" />
+		<param name="value" value="criteria.integrante" />
+		<param name="placeholder" value="msg:integranteEstado.integrante" />
+		<param name="finder" value="integranteFinderClazz" />
+		
+	</component>
+	
+	
+	
+</rasty>

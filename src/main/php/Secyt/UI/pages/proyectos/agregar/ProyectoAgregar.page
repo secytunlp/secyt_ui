@@ -1,0 +1,14 @@
+<rasty specificationClass="Secyt\UI\pages\proyectos\agregar\ProyectoAgregar" templateLocation="pages/proyectos/agregar/ProyectoAgregar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+
+	<component id="proyectoForm" type="ProyectoForm">
+		<param name="legend" value="msg:proyecto.agregar.legend" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="action" value="linkActionAgregarProyecto" />
+		<param name="method" value="str:post" />
+		<param name="proyecto" value="proyecto" />
+	</component>
+	
+</rasty>

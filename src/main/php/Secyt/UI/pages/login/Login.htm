@@ -1,0 +1,123 @@
+<!-- BEGIN: main-->
+<script>
+function  validateLogin( formId ){
+
+	
+	var isValid = WalibaForms.validateForm( formId );
+	
+	return isValid;
+	
+}
+
+function  cuilFormato( ){
+
+	WalibaForms.cuilMask('#input_username');
+    
+}
+
+function dame_perfil( cuil ){
+	
+	$("#usergroup_oid").html("");
+	var form = $("#login_form");
+	
+	$.ajax({
+	  	url: '{linkDamePerfil}',
+	  	type: "POST",
+	  	dataType: "json",
+	  	data: form.serialize(),
+	  	cache: false,
+		complete:function(){
+			//$("#loading").hide();
+		},
+	      success: function(data){
+	      	
+	    	  if( data != null && data["error"]!=null){
+					console.log(data["error"]);
+				}
+				if( data != null && data["info"]!=null){
+
+					$.each(data.roles, function(i, item) {
+		                
+		                $("#usergroup_oid").append("<option value='"+item.cd+"'>"+item.ds+"</option>");
+		            });
+				}  
+	    	  
+	    	  
+	      	if( data != null && data["error"]!=null){
+	      		showMessageError( data["error"], true );
+	      		//inhabilitar el submit.
+	      		$("#submit").hide();
+	      	}
+	      	
+	      	else{
+	      		
+	            $.each(data.perfil, function(i, item) {
+	                
+	                $("#usergroup_oid").append("<option value='"+item.cd+"'>"+item.ds+"</option>");
+	            });
+	      		
+	      		for ( var indice = 0; indice < data["perfil"].length; indice++) {
+	      			
+	      			
+	      		}
+	      		
+	      		$("#submit").show();
+	      	} 	
+	      	 
+	      }
+	});
+}
+</script>
+
+<style>
+
+.jfVal, .jValSpacercover {
+    display: none;
+}
+
+.jfVal .content {
+    display: none;
+}
+
+
+</style>
+
+<div class="logincontainer">
+<a class="logo" target="_blank" href="#"><img border="0" alt="{login_titulo} - {login_subtitulo}"  title="{login_titulo} - {login_subtitulo}" name="imLogo" id="imLogo" src="{WEB_PATH}/css/images/aliba-logo.jpg" width="300"></a>
+
+<!-- Login form -->
+<form id="login_form" target="_top" name="login_form" action='{login_action}'  onsubmit="javascript: return validateLogin('#login_form');" method='post'>
+    <fieldset>
+    <legend>{iniciar_sesion}</legend>
+
+        <div class="item">
+            <input  placeholder="{lbl_username} *" type="text" size="24" value="" id="input_username" name="username" data-required="yes" data-required-msg="{txt_ingrese_username}" class="input-text input-max-length" onFocus="javascript: cuilFormato();" onBlur="dame_perfil(this)"/>
+        	
+        </div>
+        <div class="item">
+            <input  placeholder="{lbl_password} *"  type="password" classsize="24" value="" id="input_password" name="password" data-required="yes" data-required-msg="{txt_ingrese_password}"/>
+        </div>
+        <div class="item">
+            <select id="usergroup_oid" name="usergroup_oid" data-required="yes" data-required-msg="{txt_ingrese_usergroup}">
+				<option value="">{lbl_usergroup} *</option>
+			</select>
+        </div>
+    	<div class="required-fields">(*) {txt_campos_obligatorios}</div>        
+    </fieldset>
+    <!-- BEGIN: msg_error -->
+	<fieldset class="ui-state-error">
+			{msg}	
+	</fieldset>
+	<!-- END: msg_error -->
+    <fieldset class="tblFooters">
+        <input type="submit" id="input_go" value="{btn_ingresar}">
+   	</fieldset>
+   	<div class="login_acciones">
+   		<span><a href="{link_registrarse}">{lbl_registrarse}</a></span>
+   		<span><a href="{link_solicitarClave}">{lbl_solicitarClave}</a></span>
+   	</div>
+	</form>
+
+</div>
+    		
+<!-- END: main-->

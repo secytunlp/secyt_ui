@@ -1,0 +1,13 @@
+<rasty specificationClass="Secyt\UI\pages\integranteEstados\IntegranteEstados" templateLocation="pages/integranteEstados/IntegranteEstados.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+
+	<component id="integranteEstadosFilter" type="IntegranteEstadoFilter">
+		<param name="gridModelClazz" value="modelClazz" />
+		<param name="uicriteriaClazz" value="uicriteriaClazz" />
+		<param name="legend" value="msg:integranteEstado.buscar" />
+		<param name="legendAgain" value="msg:integranteEstado.buscar.again" />
+		<param name="resultDiv" value="str:searchdiv" />
+	</component>
+	
+</rasty>

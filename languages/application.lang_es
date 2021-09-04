@@ -1,0 +1,653 @@
+{
+
+	"common.campos_obligatorios":"Campos requeridos",
+
+	"app.title":"SeCyT",
+
+	"app.pdf.footer":"Secretaría de Ciencia y Técnica / Tel. (xxx) xxxxxx / Dir. xxxx - xxx - xxxx",
+	
+	"menu.page":"Opciones de la página",
+	"menu.main":"Menú de navegación",
+	"menu.main.reload":"Actualizar la página",
+	"menu.main.panel":"Panel de trabajo",
+	
+	"menu.admin":"Administración",
+	"menu.admin_home":"Tablero de control",
+
+	"menu.seguridad":"Seguridad",
+	"menu.abm":"Panel de Control",
+	
+	
+
+	"menu.cliente_home":"Inicio",
+
+	
+	"menu.usuarios":"Usuarios",
+	"menu.usuarios.agregar":"Nuevo Usuario",
+	"menu.usuarios.modificar":"Modificar Usuario",
+	"menu.usuarios.asignarRoles":"Asignar perfiles",
+	"menu.usuarios.consultarRoles":"Consultar perfiles",
+	"menu.usuarios.eliminar":"Eliminar Usuario",
+	
+	"menu.permisos":"Permisos",
+	"menu.permisos.agregar":"Nuevo Permiso",
+	"menu.permisos.modificar":"Modificar Permiso",
+	
+	"menu.roles":"Perfiles",
+	"menu.roles.agregar":"Nuevo Perfil",
+	"menu.roles.modificar":"Modificar Perfil",
+	"menu.roles.asignarPermisos":"Asignar permisos",
+	"menu.roles.consultarPermisos":"Consultar permisos",
+
+	
+
+	
+	"menu.logout":"Salir del sistema",
+	
+	"user.required.exception.msg": "Debe iniciar sesión para operar el sistema",
+	"user.permission.exception.msg": "No cuenta con los privilegios para realizar la operación",  
+	"invalid.password.exception.msg": "La clave ingresada no es válida",
+	
+	"login.title":"SeCyT",
+	"login.titulo":"SeCyT",
+	"login.subtitulo":"Administración",
+	
+	"login.iniciar_sesion":"Iniciar sesión",
+	"login.username":"C.U.I.L.",
+	"login.password":"Clave",
+	"login.ingrese_username":"Ingrese un C.U.I.L.",
+	"login.ingrese_password":"Ingrese una clave",
+	"login.ingresar":"Comenzar!",
+	"login.invalid_password": "La clave ingresada no es válida",
+	"login.user_not_found": "El C.U.I.L. ingresado no es válido",
+	
+	"login.usergroup":"Perfiles",
+	"login.ingrese_usergroup":"Seleccione un perfil",
+
+	"login.solicitarNuevaClave": "Olvidé mi clave",
+	"login.registrarse": "Registrarse",
+
+	"admin_home.title": "SeCyT / BackOffice",
+	"admin_home.subtitle": "Administración",
+
+ 	"dia.domingo.label": "Domingo",
+	"dia.lunes.label": "Lunes",
+	"dia.martes.label": "Martes",
+	"dia.miercoles.label": "Miércoles",
+	"dia.jueves.label": "Jueves",
+	"dia.viernes.label": "Viernes",
+	"dia.sabado.label": "Sábado",
+    								   
+   	"tipo.documento.dni.label":"DNI", 
+	"tipo.documento.le.label":"LE",
+	"tipo.documento.lc.label":"LC",
+	"tipo.documento.ci.label":"CI",
+	"tipo.documento.pasaporte.label":"Pasaporte",
+	
+	"sexo.m.label": "Masculino",
+	"sexo.f.label": "Femenino",
+	
+	
+
+	"usuarios.title": "Listado de Usuarios",
+	
+	"usuarios.listar": "Listado de Usuarios",
+	"usuario.agregar": "Agregar un nuevo Usuario",
+	"usuario.agregar.title": "Agregar un nuevo Usuario",
+	"usuario.agregar.legend": "Ingrese los datos del Usuario",
+	
+	"user.add.username.repetead": "Ya existe un usuario para el C.U.I.L. ingresado",
+	
+	"usuario.modificar": "Modificar datos del Usuario",
+	"usuario.modificar.title": "Modificar Usuario",
+	"usuario.modificar.legend": "Modifique los datos del Usuario",
+	
+	"usuario.eliminar": "Eliminar el Usuario",
+	"usuario.eliminar.title": "Eliminar Usuario",
+	"usuario.eliminar.legend": "Confirma eliminar el Usuario?",
+	
+	"usuario.eliminar.usuario.logueado.exception": "No puede eliminarse Ud mismo",
+	
+	"usuario.buscar": "Buscar Usuarios",
+	"usuario.buscar.again": "Afinar búsqueda...",
+
+	"usuario.username":"C.U.I.L.",
+	"usuario.username.unicity":"Ya existe un Usuario para el C.U.I.L. indicado",
+	"usuario.username.required":"Ingrese un C.U.I.L.",
+	
+	"usuario.name":"Nombre",
+	"usuario.name.required":"Ingrese un nombre",
+	
+	"usuario.lastname":"Apellido",
+	"usuario.lastname.required":"Ingrese un apellido",
+	
+	"usuario.email":"E-mail",
+	"usuario.email.unicity":"Ya existe un Usuario para el E-mail indicado",
+	"usuario.email.required":"Ingrese un e-mail",
+	"usuario.email.invalid":"E-mail inválido",
+	
+   	"usuario.password":"Clave",
+	"usuario.password.required":"Ingrese una clave",
+	
+	"usuario.password.repeat":"Repetir Clave",
+	"usuario.password.repeat.required":"Ingrese nuevamente la clave",
+	
+	"usuario.password.repeat.invalid":"Las claves ingresadas son distintas",
+	
+	"usuario.password.old":"Clave actual",
+	"usuario.password.old.required":"Ingrese la clave actual",
+
+	"usuario.newPassword":"Nueva clave",
+	"usuario.newPassword.required":"Ingrese la nueva clave",
+
+	"usuario.newPassword.repeat":"Repetir nueva clave",
+	"usuario.newPassword.repeat.required":"Ingrese nuevamente la clave",
+	
+	"user.password.invalid": "La clave ingresada no es la correcta",
+	
+	"usuario.cambiarClave.newPasswordRepetir.invalid": "Las nuevas claves ingresadas son distintas",
+	
+	
+	"solicitarNuevaClave.title": "Recupero de clave",
+	"solicitarNuevaClave.legend": "Recupero de clave",
+	"solicitarNuevaClave.submit": "Recuperar",
+	"solicitarNuevaClave.login": "Ingresar",
+	"solicitarNuevaClave.registrarse": "Registrarse",
+	
+	"solicitarNuevaClave.usuario.invalid": "Usuario no registrado",
+	"solicitarNuevaClaveSuccess.title": "Recupero de clave",
+	
+	"nuevaClave.confirmar.title": "Obtener nueva clave",
+	"nuevaClave.confirmar.legend": "Genera tu nueva clave",
+	
+	"nuevaClave.newPassword": "Nueva clave",
+	"nuevaClave.newPassword.repetir": "Repite la clave",
+	"nuevaClave.securitycode": "Código de verificación",
+	"nuevaClave.captcha": "Ingresa el código de verificación",
+	
+	"nuevaClave.captcha.invalido": "El código de verificación no es correcto", 
+	
+	"nuevaClave.newPassword.repetir.invalid": "Las claves ingresadas no coinciden", 
+	
+	"nuevaClave.newPassword.requerida": "Ingresa la nueva clave",
+	"nuevaClave.newPassword.repetir.requerida": "Ingresa nuevamente la clave",
+	"nuevaClave.captcha.requerido": "Ingresa el código de verificación",
+	
+	"nuevaClaveConfirmar.success.title": "Recupero de clave",
+	 
+	
+	"usuario.oid":"Código interno",
+	"usuario.lastLogin":"Último login",
+  	"usuario.loginFrom":"IP",
+  	
+  	"usuario.asignarRoles.title": "Asignando perfiles",
+	"usuario.asignarRoles.legend": "Asignar perfiles al usuario $1",
+
+  	
+
+	"permisos.title": "Listado de Permisos",
+	
+	"permisos.listar": "Listado de Permisos",
+	"permiso.agregar": "Agregar un nuevo Permiso",
+	"permiso.agregar.title": "Agregar un nuevo Permiso",
+	"permiso.agregar.legend": "Ingrese los datos del Permiso",
+	
+	"permiso.modificar": "Modificar datos del Permiso",
+	"permiso.modificar.title": "Modificar Permiso",
+	"permiso.modificar.legend": "Modifique los datos del Permiso",
+	
+	"permiso.buscar": "Buscar Permisos",
+	"permiso.buscar.again": "Afinar búsqueda...",
+
+	"permiso.oid":"Código",
+	"permiso.name":"Nombre",
+	"permiso.name.required":"Ingrese un nombre",
+	"permiso.name.unicity":"Ya existe un Permiso con el Nombre indicado",
+	"permiso.description":"Descripción",
+	"permiso.padre":"Padre",
+	
+
+	"roles.title": "Listado de Perfiles",
+	
+	"roles.listar": "Listado de Perfiles",
+	"rol.agregar": "Agregar un nuevo Perfil",
+	"rol.agregar.title": "Agregar un nuevo Perfil",
+	"rol.agregar.legend": "Ingrese los datos del Perfil",
+	
+	"usergroup.add.name.repetead": "Ya existe un perfil para el nombre ingresado",
+	
+	"rol.modificar": "Modificar datos del Perfil",
+	"rol.modificar.title": "Modificar Perfil",
+	"rol.modificar.legend": "Modifique los datos del Perfil",
+	
+	"rol.buscar": "Buscar Perfiles",
+	"rol.buscar.again": "Afinar búsqueda...",
+
+	"rol.asignarPermisos.title": "Asignando permisos",
+	"rol.asignarPermisos.legend": "Asignar permisos al perfil $1",
+
+	"rol.consultarPermisos.title": "Consultar permisos de un perfil",
+	"rol.consultarPermisos.legend": "Permisos del perfil $1",
+
+	"usuario.consultarRoles.legend" :"Consultando perfiles de $1",
+	"usuario.consultarRoles.title" :"Perfiles de usuario}",
+
+	"rol.oid":"Código",
+	"rol.name":"Nombre",
+	"rol.name.required":"Ingrese un nombre",
+	"rol.name.unicity":"Ya existe un Perfil con el Nombre indicado",
+	"rol.description":"Descripción",
+	
+  
+ 	
+ 	"registracion.continuar": "Continuar",
+  	
+  	
+  	"registracion.agregar.title": "Registrarse",
+  	
+  	
+ 	"registracion.nombre": "Nombre",
+ 	"registracion.primerApellido": "Primer apellido",
+ 	"registracion.segundoApellido": "Segundo apellido",
+ 	"registracion.segundoApellido.checkbox": "Tengo segundo apellido",
+ 	"registracion.segundoApellido.requerido": "Ingresa tu segundo apellido",
+
+ 	"registracion.tipoDocumento.requerido": "Ingresa tu Tipo documento",
+ 	"registracion.nroDocumento.requerido": "Ingresa tu Nº documento",
+ 	"registracion.nombre.requerido": "Ingresa tu Nombre",
+ 	"registracion.primerApellido.requerido": "Ingresa tu Primer apellido",
+ 	
+ 	"registracion.usuario.legend": "Crea tu usuario",
+ 	"registracion.email": "E-mail",
+ 	"registracion.emailRepetir": "Confirmar e-mail",
+ 	"registracion.clave": "Contraseña",
+ 	"registracion.clave.formato": "8 o más caracteres e incluye al menos una mayúscula y un número",
+ 	"usuario.clave.formato": "8 o más caracteres e incluye al menos una mayúscula y un número",
+ 	"registracion.claveRepetir": "Confirmar contraseña",
+	"registracion.claveRepetir.invalid": "Las contraseñas ingresadas no coinciden",
+	
+	"registracion.email.repetido": "Ya existe un cliente con el email ingresado",
+ 	"registracion.confirmar.codigoExpirado": "El código de validación no es válido",
+ 	
+ 	
+	"email.formato.invalido":"formato de e-mail incorrecto",
+
+ 	"registracion.email.requerido": "Ingresa tu e-mail",
+ 	"registracion.emailRepetir.requerido": "Confirma tu e-mail",
+ 	"registracion.clave.requerida": "Ingreso una Contraseña",
+ 	"registracion.claveRepetir.requerida": "Confirmar la contraseña",
+ 	
+ 	"registracion.datos.legend": "Tus datos",
+ 	"registracion.genero": "Género",
+ 	"registracion.fechaNacimiento": "Fecha de nacimiento",
+ 	"registracion.estadoCivil": "Estado civil",
+ 	"registracion.tipoVivienda": "Tipo de vivienda",
+ 	"registracion.domicilioCalle": "Calle",
+ 	"registracion.domicilioNumero": "Número",
+ 	"registracion.domicilioPiso": "Piso",
+ 	"registracion.domicilioDepto": "Puerta",
+ 	"registracion.poblacion": "Población",
+ 	"registracion.provincia": "Provincia",
+ 	"registracion.codigoPostal": "Código postal",
+
+ 	"registracion.genero.requerido": "Indica tu Género",
+ 	"registracion.fechaNacimiento.requerida": "Ingreso tu fecha de nacimiento",
+ 	"registracion.estadoCivil.requerido": "Indica tu estado civil",
+ 	"registracion.tipoVivienda.requerida": "Indica tu tipo de vivienda",
+ 	"registracion.domicilioCalle.requerida": "Ingresa la calle de tu dirección",
+ 	"registracion.domicilioNumero.requerido": "Ingresa el número de tu dirección",
+ 	"registracion.poblacion.requerida": "Ingresa la Población",
+ 	"registracion.provincia.requerida": "Indica la Provincia",
+ 	"registracion.codigoPostal.requerido": "Ingresa el Código postal",
+ 	
+ 	"registracion.editar.valores.prestamo": "Modificar valores",
+ 	"registracion.editar.valores.prestamo.ocultar": "Ocultar",
+ 	
+ 	"registracion.invalido.mayor65": "No debes tener más de 65 anios...",
+	"registracion.invalido.menor18": "Debes ser mayor a 18 anios...",
+
+ 	"registracion.confirmar.title": "Validando tu registración",
+  	"registracion.confirmar.legend": "Ingresa el código de seguridad",
+  	"registracion.securitycode": "Código de seguridad",
+  	"registracion.captcha": "Ingresa el código de seguridad",
+  	"registracion.captcha.requerido": "Ingresa el código de seguridad",
+  	"registracion.captcha.invalido ": "El código de seguridad no es correcto",
+  	
+  	
+ 	
+  	"grid.operaciones": "Operaciones",
+   	"grid.resultados": "Resultados de la búsqueda",
+   	
+   	"entitygrid.pagination.of": "de",
+   	"entitygrid.pagination.next": "siguiente",
+   	"entitygrid.pagination.previous": "anterior",
+    "entitygrid.pagination.first": "primero",
+    "entitygrid.pagination.last": "último",
+
+	"number.format.invalid": "Formato de número incorrecto",
+ 	
+    "form.editar": "Editar",
+    "form.aceptar": "Confirmar",
+    "form.cancelar": "Cancelar",
+    "form.volver": "Volver",
+    "form.enviar": "Enviar",
+    "form.continuar": "Continuar",
+    "form.aprobar": "Aprobar",
+    "form.rechazar": "Rechazar",
+    "form.solicitar": "Solicitar",
+    "form.confirmar": "Confirmar",
+    "form.infoAdicional": "Solicitar documentación",
+    "form.validarDocumentacion": "Validar documentación",
+    "form.anular": "Anular",
+    "form.reintentar": "Reintentar",
+    
+    "filter.buscar": "Buscar",
+    "filter.buscar.again": "Afinar búsqueda...",
+    "filter.resultados": "Resultados de la búsqueda",
+    "filter.opciones": "Opciones",
+    "filter.close.label": "Cerrar",
+ 
+ 	"combo.empty": "- seleccionar -",
+ 
+ 	"addpopup.legend":"Agregar",
+    
+    "autocomplete.empty.result": "No se encontraron resultados",
+    "autocomplete.entity.add": "Agregar",
+ 
+ 	"criteria.fechaDesde": "Desde",
+    "criteria.fechaHasta": "Hasta",
+ 	
+ 	"criteria.sin_especificar": "- sin especificar -",
+	"criteria.no": "No",
+	"criteria.si": "Si",
+	"criteria.predefinidos": "Filtros predefinidos",
+	   
+	"image.empty": "selecciona una imagen",
+	   
+	"numero.rango.maximo": "Debes ingresar un valor menor a {0}",
+ 	"numero.rango.minimo": "Debes ingresar un valor mayor a {0}",
+ 
+ 	"error.noesperado.title": "Error no esperado",
+ 	
+	
+	"uploadImage.loading": "cargando...",
+	
+    "xxx": "yyy",
+    
+ 	"operacion.invalida": "Operación inválida",
+ 	"page.not.found": "Página no disponible",
+ 	
+ 	"No result was found for query although at least one row was expected.": "la información no parece correcta",
+ 	
+ 	"menu.docentes":"Docentes",
+	"menu.docentes.agregar":"Nuevo Docente",
+	"menu.docentes.modificar":"Modificar Docente",
+    
+   
+    
+    "docentes.title": "Docentes",
+    "docente.buscar": "Buscar docente",
+    
+    
+    "docente.oid": "ID",
+   
+    
+    "menu.docentes.modificar": "Modificar docente",
+    
+    "docente.modificar.legend": "Modificar docente",
+    "docente.modificar.title": "Modificar docente",
+    
+    "menu.docentes.agregar": "Agregar docente",
+    
+    "docente.agregar.legend": "Agregar docente",
+    "docente.agregar.title": "Agregar docente",
+    "docente.agregar": "Agregar docente",
+    
+    "menu.docentes.eliminar": "Eliminar docente",
+    
+    "docente.eliminar.legend": "Eliminar docente",
+    "docente.eliminar.title": "Eliminar docente",
+    
+    "criteria.ident": "Identificador",
+    "criteria.apellido": "Apellido",
+    "criteria.nombre": "Nombre",
+    "criteria.documento": "Documento",
+    "criteria.categoria": "Categoría",
+    "criteria.facultad": "Facultad",
+    
+    "docente.ident": "Ident.",
+    "docente.apellido": "Apellido",
+    "docente.nombre": "Nombre",
+    "docente.documento": "Documento",
+    "docente.cuil": "C.U.I.L.",
+    "docente.categoria": "Categoría",
+    "docente.facultad": "Facultad",
+    "docente.nacimiento": "F. Nacimiento",
+    "docente.sexo": "Sexo",
+    "docente.femenino": "Femenino",
+    "docente.masculino": "Masculino",
+    "docente.mail": "E-Mail",
+    "docente.telefono": "Teléfono",
+    "docente.calle": "Calle",
+    "docente.nro": "Nro.",
+    "docente.piso": "Piso",
+    "docente.depto": "Depto.",
+    "docente.localidad": "Localidad",
+    "docente.provincia": "Provincia",
+    "docente.cp": "C.P.",
+    "docente.universidad": "Universidad",
+    "docente.unidad": "Lugar de trabajo",
+    "docente.titulo": "Título de Grado",
+    "docente.tituloPost": "Título de Posgrado",
+    
+    
+    "criteria.sigla": "Sigla",
+    "criteria.padre": "Dependencia",
+    
+    "unidad.oid": "Identificador",
+    "unidad.nombre": "Nombre",
+    "unidad.sigla": "Sigla",
+    "unidad.padre": "Dependencia",
+    
+    "docente.cuil.required":"Ingrese un C.U.I.L.",
+    "docente.apellido.required":"Ingrese un apellido",
+    "docente.nombre.required":"Ingrese un nombre",
+    
+    "docente.personal": "D. Personales",
+    "docente.titulos": "Títulos",
+    "docente.docencia": "Docencia",
+    "docente.investigacion": "Investigación",
+    "docente.proyectos": "Proyectos",
+    
+    "titulo.oid": "Identificador",
+    "titulo.nombre": "Título",
+    "titulo.universidad": "Universidad",
+    "titulo.nivel": "Nivel",
+    
+    "grado.label": "Grado",
+ 	"posgrado.label": "Posgrado",
+ 	
+ 	"cargos": "Cargos",
+ 	"cargo.oid": "Identificador",
+    "cargo.nombre": "Cargo",
+    "cargo.dedicacion": "Dedicación",
+    "cargo.facultad": "Facultad",
+    "cargo.desde": "F. desde",
+    "cargo.hasta": "F. hasta" ,
+    
+    "carrerainvs": "Carrera Investigación",
+ 	
+    "carrera.nombre": "Cargo",
+    "organismo.nombre": "Organismo",
+    
+    "becas": "Becas",
+ 	
+    "beca.tipo": "Tipo",
+    "beca.organismo": "Organismo",
+    
+    "ANPCyT.label": "ANPCyT",
+ 	"CIC.label": "CIC",
+ 	"CONICET.label": "CONICET",
+ 	"UNLP.label": "UNLP",
+ 	
+ 	"AGENCIA1.label": "Beca incial",
+ 	"AGENCIA2.label": "Beca superior",
+ 	
+ 	"CIC1.label": "Beca de entrenamiento",
+ 	"CIC2.label": "Beca doctoral",
+ 	"CIC3.label": "Beca posdoctoral",
+ 
+	"CONICET1.label": "Beca doctoral",
+	"CONICET2.label": "Beca finalización del doctorado",
+	"CONICET3.label": "Beca posdoctoral",
+
+	"UNLP1.label": "TIPO A",
+	"UNLP2.label": "TIPO B-MAESTRIA",
+	"UNLP3.label": "TIPO B-DOCTORADO",
+	"UNLP4.label": "RETENCION DE POSTGRADUADO",
+	"UNLP5.label": "Beca Cofinanciada (UNLP-CIC)",
+	"UNLP6.label": "Beca doctoral",
+	"UNLP7.label": "Beca maestría",
+	"UNLP8.label": "Beca posdoctoral",
+	"UNLP9.label": "Programa de retención de Doctores",
+	
+	"beca.evc": "Beca EVC",
+	
+	"menu.proyectos":"Proyectos",
+	"menu.proyectos.agregar":"Nuevo Proyecto",
+	"menu.proyectos.modificar":"Modificar Proyecto",
+	"menu.proyectos.integrantes":"Integrantes",
+    
+   
+    
+    "proyectos.title": "Proyectos",
+    "proyecto.buscar": "Buscar proyecto",
+    
+    "proyecto.filter.anioActual": "Proyectos actuales",
+    
+    "proyecto.oid": "ID",
+   
+    
+    "menu.proyectos.modificar": "Modificar proyecto",
+    
+    "proyecto.modificar.legend": "Modificar proyecto",
+    "proyecto.modificar.title": "Modificar proyecto",
+    
+    "menu.proyectos.agregar": "Agregar proyecto",
+    
+    "proyecto.agregar.legend": "Agregar proyecto",
+    "proyecto.agregar.title": "Agregar proyecto",
+    "proyecto.agregar": "Agregar proyecto",
+    
+    "menu.proyectos.eliminar": "Eliminar proyecto",
+    
+    "proyecto.eliminar.legend": "Eliminar proyecto",
+    "proyecto.eliminar.title": "Eliminar proyecto",
+    
+    "criteria.ident": "Identificador",
+    "criteria.codigo": "Código",
+    
+    "criteria.tipoAcreditacion": "Tipo",
+    
+    
+    "proyecto.ident": "Ident.",
+    "proyecto.codigo": "Código",
+    "proyecto.director": "Director",
+    "proyecto.codigo.required": "Ingrese un Código",
+	"proyecto.titulo": "Título",
+	"proyecto.titulo.required": "Ingrese un Título",
+    "proyecto.tipoAcreditacion": "Tipo",
+    "proyecto.inicio": "Inicio",
+    "proyecto.fin": "Fin",
+    "proyecto.facultad": "Facultad",
+    "proyecto.codigoSIGEVA": "Código SIGEVA",
+    "proyecto.estado": "Estado",
+    "proyecto.unidad": "Unidad de Investigación",
+    "proyecto.abstract": "Abstract",
+    "proyecto.abstractEng": "Abstract en Inglés",
+    "proyecto.clave1": "Clave 1",
+    "proyecto.clave2": "Clave 2",
+    "proyecto.clave3": "Clave 3",
+    "proyecto.clave4": "Clave 4",
+    "proyecto.claveEng1": "Clave en inglés 1",
+    "proyecto.claveEng2": "Clave en inglés 2",
+    "proyecto.claveEng3": "Clave en inglés 3",
+    "proyecto.claveEng4": "Clave en inglés 4",
+    "proyecto.disciplina": "Disciplina",
+    "proyecto.especialidad": "Especialidad",
+    "proyecto.tipo": "Tipo de investigación",
+    "proyecto.campo": "Campo de aplicación",
+    "proyecto.linea": "Linea de investigación",
+    
+    "tipo.aplicada": "Investigación Aplicada",
+    "tipo.basica": "Investigación Básica",
+    "tipo.desarrollo": "Desarrollo experimental o tecnológico",
+    
+    
+    "proyecto.basicos": "Básicos",
+    "proyecto.entidades": "Entidades",
+    "proyecto.resumen": "Resumen",
+    "proyecto.claves": "P. Claves",
+    "proyecto.otros": "Otros",
+    
+    "criteria.proyecto": "Proyecto",
+    "criteria.codigo": "Código",
+    "criteria.investigador": "Investigador",
+    
+    "integrantes.title": "Integrantes",
+    "integrante.buscar": "Buscar integrante",
+    
+    
+    "integrante.oid": "ID",
+   
+    
+    "menu.integrantes.modificar": "Modificar integrante",
+    
+    "integrante.modificar.legend": "Modificar integrante",
+    "integrante.modificar.title": "Modificar integrante",
+    
+    "menu.integrantes.agregar": "Agregar integrante",
+    
+    "integrante.agregar.legend": "Agregar integrante",
+    "integrante.agregar.title": "Agregar integrante",
+    "integrante.agregar": "Agregar integrante",
+    
+    "integrante.proyecto": "Proyecto",
+    "integrante.tipo": "Tipo",
+    "integrante.investigador": "Investigador",
+    "integrante.alta": "Alta",
+    "integrante.baja": "Baja",
+    "integrante.horasinv": "Hs.",
+    "integrante.estado": "Estado",
+    
+    "menu.integrantes.estados": "Estados",
+    
+    "integranteEstados.title": "Estados",
+    "integranteEstado.buscar": "Buscar estado",
+    
+    "criteria.integrante": "Integrante",
+    
+    "integranteEstado.desde": "Inicio",
+    "integranteEstado.hasta": "Fin",
+    "integranteEstado.motivo": "Motivo",
+    "integranteEstado.user": "Usuario",
+    
+    "menu.integranteEstados.agregar": "Agregar estado",
+    
+    "integranteEstado.agregar.legend": "Agregar estado",
+    "integranteEstado.agregar.title": "Agregar estado",
+    "integranteEstado.agregar": "Agregar estado",
+    
+    "integranteEstado.integrante": "Integrante",
+    "integranteEstado.cambio": "Cambio"
+    
+    
+   
+   
+    
+   
+ 	  
+
+	
+    
+}

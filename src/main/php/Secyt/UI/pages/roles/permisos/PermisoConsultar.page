@@ -1,0 +1,7 @@
+<rasty specificationClass="Secyt\UI\pages\roles\permisos\PermisoConsultar" templateLocation="pages/roles/permisos/PermisoConsultar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+	<param name="rolOid" value="get:oid" />
+
+
+</rasty>

@@ -1,0 +1,14 @@
+<rasty specificationClass="Secyt\UI\pages\integrantes\agregar\IntegranteAgregar" templateLocation="pages/integrantes/agregar/IntegranteAgregar.htm"> 
+
+	<param name="layoutType" value="str:SecytMetroLayout" />
+
+	<component id="integranteForm" type="IntegranteForm">
+		<param name="legend" value="msg:integrante.agregar.legend" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="action" value="linkActionAgregarIntegrante" />
+		<param name="method" value="str:post" />
+		<param name="integrante" value="integrante" />
+	</component>
+	
+</rasty>

@@ -1,0 +1,128 @@
+<!-- BEGIN:main -->
+<script>
+
+
+function submitBuscarDocentes(){
+
+	$( "#page" ).val( 1 );
+	
+	//findDocentes();
+
+	submitBuscar("{WEB_PATH}", "#docentes_filter{id}", "#{resultDiv}");
+}
+
+function ordenarDocentes(name, type){
+
+	$( "#orderBy" ).val(name);
+	$( "#orderByType" ).val(type);
+	
+	submitBuscar("{WEB_PATH}", "#docentes_filter{id}", "#{resultDiv}");
+}
+
+function paginateDocentes(page){
+	$( "#page" ).val(page);
+
+	submitBuscar("{WEB_PATH}", "#docentes_filter{id}", "#{resultDiv}");
+}
+
+function selectDocente(event, docenteId, rowId, checkboxId){
+
+
+	/* muestro un pop con las opciones sobre el docente */
+	
+	gotoLink("{linkSelect}?oid="+docenteId);
+	
+}
+
+function deleteCallback(data){
+
+	console.log( data["info"] );
+	submitBuscar("{WEB_PATH}", "#docentes_filter{id}", "#{resultDiv}");
+}
+
+function cambioEstadoCallback(data){
+
+	console.log( data["info"] );
+	submitBuscar("{WEB_PATH}", "#docentes_filter{id}", "#{resultDiv}");
+}
+
+$(document).ready(function(){
+
+	submitBuscar("{WEB_PATH}", "#docentes_filter{id}", "#{resultDiv}");
+
+	 $(".item input").keyup(function (e) {
+         if (e.keyCode == 13) {
+             // función para capturar el enter en el filter default.
+        	 submitBuscar("{WEB_PATH}", "#docentes_filter{id}", "#{resultDiv}");
+         }
+     });
+	
+});
+
+
+</script>
+
+
+<div id="divDocentes{id}Toggle1" style="display:none">
+<form class="cuentas_form">
+		<fieldset>
+		<legend class="search_again" id="legend_find{id}_open">{legend_again}</legend>
+		</fieldset>
+</form>		
+</div>
+<div id="divDocentes{id}Toggle2">
+<form class="cuentas_form" id="docentes_filter{id}">
+
+		<fieldset>
+		
+		<legend id="legend_find{id}">{legend}</legend>		
+
+		<div class="criteria_left">
+			
+			<div class="item">
+			    <label for="apellido">{lbl_apellido}:</label>
+		    	<rasty id="apellido" />
+			</div>
+			<div class="item">
+			    <label for="nombre">{lbl_nombre}:</label>
+		    	<rasty id="nombre" />
+			</div>
+			<div class="item">
+			    <label for="documento">{lbl_documento}:</label>
+		    	<rasty id="documento" />
+			</div>
+		</div>
+		<div class="criteria_right">
+			
+			<div class="item">
+			    <label for="categoria">{lbl_categoria}:</label>
+		    	<rasty id="categoria" />
+			</div>
+			<div class="item">
+			    <label for="facultad">{lbl_facultad}:</label>
+		    	<rasty id="facultad" />
+			</div>
+		</div>
+		
+		
+	</fieldset>
+	
+	<input type="hidden" name="model" value="{model}">
+	<input type="hidden" name="filter" value="{filter}">
+	<input type="hidden" name="sortCallback" value="ordenarDocentes">
+	<input type="hidden" name="paginationCallback" value="paginateDocentes">
+	<input type="hidden" name="selectRowCallback" value="{selectRowCallback}">
+	<input type="hidden" id="orderBy" name="orderBy" value="{orderBy}">
+	<input type="hidden" id="orderByType" name="orderByType" value="{orderByType}">
+	<input type="hidden" id="page" name="page" value="1">
+
+</form>
+<form  class="cuentas_form" id="buttons{id}">
+	<fieldset class="tblFooters">
+	
+		<button id="input_submit_ajax_Docente{id}"  type="button"  onclick="javascript: $( '#page' ).val( 1 ); submitBuscar('{WEB_PATH}', '#docentes_filter{id}', '#{resultDiv}');"><i class="icon-search on-left"></i>{lbl_submit}</button>
+	
+	</fieldset>
+</form>	
+</div>
+<!-- END:main -->
